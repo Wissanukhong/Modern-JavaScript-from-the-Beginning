@@ -1,9 +1,14 @@
 // console
 console.clear();
 console.log(123);
+
+
 console.log("text");
 console.log([1, 2, 3, 4]);
-console.log({a:1, b:2});
+console.log({
+    a: 1,
+    b: 2
+});
 console.error('this is some error');
 console.warn('This is warning');
 console.time('hello');
@@ -48,11 +53,15 @@ console.log(myName);
 const yourName = 'John';
 console.log(yourName);
 
+// const
 const person = {
     name: 'Wissanu',
     age: 30
 }
 
+// Reassign const
 person.name = 'John Smith';
+person.age = 45;
 console.log(person);
 
+// Data type
