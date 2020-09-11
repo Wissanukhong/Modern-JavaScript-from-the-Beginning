@@ -4,6 +4,10 @@
 </div>
 
 - [introduction to javascript](#introduction-to-javascript)
+- [How to name in variables](#how-to-name-in-variables)
+- [Variable](#variable)
+
+[This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
 ### introduction to javascript
 1. Basics & Fundamentals: Data types, let & const variables, functions, conditionals, loops, object literals, arrays, etc
@@ -13,3 +17,13 @@
 5. ES2015+: Arrow functions, template strings, generators, iterators, maps & sets, symbols & more
 6. JavaScript Patterns: Module, Factory, State, Observer, Mediator, Singleton Other: Local & session storage, regular expressions, try/catch error handling
 7.  10 Projects of all kinds
+
+### How to name in variables
+- `var firstName = 'John';` // Camel case 
+- `var first_name = 'Sara';` // Underscore case
+- `var FirstName = 'Tom';` // Pascal case
+
+### Variable
+- var is global variable
+- let is Block variable
+- const is constant variable (We can chenge the value in const with object)
