@@ -119,3 +119,6 @@ console.log(val);
 console.log(typeof val);
 console.log(val.toFixed());
 ```
+> **Note 📑**
+>>  `.toFixed()` is only work for number  
+>> `.length()` is only work for string
