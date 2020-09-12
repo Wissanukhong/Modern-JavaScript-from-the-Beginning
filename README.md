@@ -36,6 +36,8 @@
 
 ### Data types 📄
 
+Data types basically specify what kind of data can be stored and manipulated within a program. There are six basic data types in JavaScript which can be divided into three main categories: primitive (or primary), composite (or reference), and special data types. String, Number, and Boolean are primitive data types.
+
 #### Primitive types
 
 1. String
@@ -46,3 +48,13 @@
 6. Symbol (ES6)
 
 #### Reference types - object
+
+```js
+const person = {
+  name: "Wissanu",
+  age: 28,
+};
+
+// return is object
+console.log(typeof person);
+```

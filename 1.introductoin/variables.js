@@ -63,5 +63,5 @@ const person = {
 person.name = 'John Smith';
 person.age = 45;
 console.log(person);
+console.log(typeof person);
 
-// Data type
