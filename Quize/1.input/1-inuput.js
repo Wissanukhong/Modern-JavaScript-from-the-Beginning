@@ -4,7 +4,16 @@
 
 let myNumner = 4;
 
-if (myNumner%2 == 0 ) {
+if (myNumner % 2 == 0) {
+    console.log('event');
+} else {
+    console.log('old');
+}
+
+// upgrade
+let yourNumber = ~~prompt('press your number between 1-9');
+
+if (yourNumber % 2 == 0) {
     console.log('event');
 } else {
     console.log('old');
