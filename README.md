@@ -76,8 +76,7 @@ let val;
 val = String(555);
 console.log(val);
 console.log(typeof val);
-console.log(val.length)
-
+console.log(val.length);
 
 // Boolean to string
 val = String(true);
@@ -121,10 +120,22 @@ console.log(val);
 console.log(typeof val);
 console.log(val.toFixed());
 ```
+
 > **Note 📑**
->>  `.toFixed()` is only work for number  
->> `.length()` is only work for string
+>
+> > `.toFixed()` is only work for number  
+> > `.length()` is only work for string
 
 ### Math (Number)
+
+| Syntax   | Description                                                |
+| -------- | ---------------------------------------------------------- |
+| Header   | Title                                                      |
+| random() | random number between 0-9                                  |
+| round()  | Used to round the decimal of a specified number            |
+| ceil()   | Used to round decimals to integers. And to have more value |
+| floor()  | Used to round decimals to integers. And to have less value |
+| max()    | Used to find the greater value between the given numbers   |
+| min()    | Used to find the smaller value between the given numbers   |
 
 ### String
