@@ -10,6 +10,8 @@
   - [Primitive types](#primitive-types)
   - [Reference types - object](#reference-types---object)
   - [Type conversion](#type-conversion)
+- [Math (Number)](#math-number)
+- [String](#string)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -122,3 +124,7 @@ console.log(val.toFixed());
 > **Note 📑**
 >>  `.toFixed()` is only work for number  
 >> `.length()` is only work for string
+
+### Math (Number)
+
+### String
