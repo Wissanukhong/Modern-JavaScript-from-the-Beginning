@@ -11,7 +11,9 @@
   - [Reference types - object](#reference-types---object)
   - [Type conversion](#type-conversion)
 - [Math (Number)](#math-number)
+  - [Example code](#example-code)
 - [String](#string)
+  - [Example code](#example-code-1)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -138,4 +140,103 @@ console.log(val.toFixed());
 | max()    | Used to find the greater value between the given numbers   |
 | min()    | Used to find the smaller value between the given numbers   |
 
+you can read this for method  
+[JavaScript :: Math Class](http://code.function.in.th/javascript/math)
+
+#### Example code
+
+```js
+let val;
+
+val = Math.E;
+val = Math.random();
+val = Math.floor();
+val = Math.min();
+val = Math.max();
+val = Math.ceil(2.5);
+
+// output
+console.log(val);
+```
+
 ### String
+
+| Syntax              | Description                                                                                                    |
+| ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Header              | Title                                                                                                          |
+| length              | Check how many character that it contain                                                                       |
+| .toUpperCase()      | Change text to upper case                                                                                      |
+| .toLowerCase()      | Change text to Lower case                                                                                      |
+| .indexOf('l')       | It will return the first index at which a given element can be found in the array, or -1 if it is not present. |
+| .charAt('0')        | It will return the index of in the element                                                                     |
+| .charAt(.length - 1 | It will return the last value                                                                                  |
+| .substring(0, 4)    | Used to substring the string in array                                                                          |
+| .slice(0, 4)        | Used to Slice the string in array                                                                              |
+| .replace('Brad')    | Used to replace the value                                                                                      |
+| .includes()         | Used to find the value in the array but it will return true and false                                          |
+
+#### Example code
+
+```js
+const firstName = "Wissanu";
+const lastName = "Khongjandee";
+const age = 27;
+
+let fullName;
+
+// concatenation
+fullName = firstName + lastName + age;
+
+// append
+fullName = "John";
+fullName += "Traversy";
+
+fullName = "Hello my name is " + firstName + " I am " + age;
+
+// Escaping
+fullName = "That's awesome";
+
+// Length
+fullName = firstName.length;
+console.log(fullName);
+
+// concat()
+fullName = firstName.concat(" ", lastName);
+
+// Change case
+fullName = firstName.toUpperCase();
+fullName = firstName.toLowerCase();
+
+// index of array (start at 0)
+fullName = firstName[5];
+
+// indexOf()
+fullName = firstName.indexOf("l");
+fullName = firstName.lastIndexOf("l");
+
+// charAt()
+fullName = firstName.charAt("0");
+
+// Get last char
+fullName = firstName.charAt(firstName.length - 1);
+
+// substring()
+fullName = firstName.substring(0, 4);
+
+// slice()
+fullName = firstName.slice(0, 4);
+fullName = firstName.slice(-3);
+
+// split()
+fullName = str.split(" ");
+fullName = tags.split(",");
+
+// replace()
+fullName = str.replace("Brad", "Jack");
+
+// includes()
+fullName = str.includes("foo");
+
+// output
+console.log(fullName);
+```
