@@ -11,6 +11,8 @@ if (myNumner % 2 == 0) {
 }
 
 // upgrade
+// can get the value from user
+
 let yourNumber = ~~prompt('press your number between 1-9');
 
 if (yourNumber % 2 == 0) {
