@@ -11,9 +11,9 @@
   - [Reference types - object](#reference-types---object)
   - [Type conversion](#type-conversion)
 - [Math (Number)](#math-number)
-  - [Example code](#example-code)
+  - [Example 🌱](#example-)
 - [String](#string)
-  - [Example code](#example-code-1)
+  - [Example 🌱](#example--1)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -68,7 +68,7 @@ console.log(typeof person);
 
 Type conversion is change the defalt type of thier variable to something.
 
-**instance**
+**Example 🌱**
 
 ```js
 // defalt variable
@@ -141,9 +141,9 @@ console.log(val.toFixed());
 | min()    | Used to find the smaller value between the given numbers   |
 
 you can read this for method  
-[JavaScript :: Math Class](http://code.function.in.th/javascript/math)
+[📌 JavaScript :: Math Class](http://code.function.in.th/javascript/math)
 
-#### Example code
+#### Example 🌱
 
 ```js
 let val;
@@ -175,7 +175,7 @@ console.log(val);
 | .replace('Brad')    | Used to replace the value                                                                                      |
 | .includes()         | Used to find the value in the array but it will return true and false                                          |
 
-#### Example code
+#### Example 🌱
 
 ```js
 const firstName = "Wissanu";
