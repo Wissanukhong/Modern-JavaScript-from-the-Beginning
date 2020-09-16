@@ -30,10 +30,17 @@ if (name === massege2) {
     alert('คุณไม่รู้จักชื่อฉัน');
 }
 
-// ternary
+// Do you my name ternary style
 let myName = prompt('Do you know my name');
 let massege3 = 'wissanu'
 
 let sendAlert = (massege3 == myName) ? 'You know my name' : 'You do not know my name';
 
 alert(sendAlert);
+
+// age price
+let age2 = prompt('press your age');
+let price;
+let yourPrice = (age2 > 18 ) ? price = 2000 : price = 3500;
+
+console.log(price);
