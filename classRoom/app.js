@@ -6,7 +6,7 @@ console.log(c);
 // จะนำค่าไปใช้ก่อนค่อยบวก(i++)
 let b = 10;
 let d = b++;
-console.log(d);
+console.log(d); 
 
 // workshop ++zero
 let zero = 5;

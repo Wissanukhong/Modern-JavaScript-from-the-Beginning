@@ -252,12 +252,12 @@ console.log(fullName);
 // บวกก่อนค่อยนำค่าไปใช้(++i)
 let a = 5;
 let c = ++a;
-console.log(c);
+console.log(c); // 6
 
 // จะนำค่าไปใช้ก่อนค่อยบวก(i++)
 let b = 10;
 let d = b++;
-console.log(d);
+console.log(d); // 10
 
 // for loop show the value
 let cars = ["Suzuki", "Hobda", "Toyota"];
