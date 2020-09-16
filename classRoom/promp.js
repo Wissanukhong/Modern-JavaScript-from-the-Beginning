@@ -11,7 +11,8 @@
 
 let myStatement = prompt();
 
-let inputNumber = +myStatement;
+// let inputNumber = +myStatement;
+let inputNumber = Number(myStatement);
 
 if (typeof inputNumber == "number" && !isNaN(inputNumber) ) {
     if (inputNumber >= 5) {

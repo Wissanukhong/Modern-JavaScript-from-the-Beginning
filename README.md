@@ -14,6 +14,9 @@
   - [Example 🌱](#example-)
 - [String](#string)
   - [Example 🌱](#example--1)
+- [In the classroom](#in-the-classroom)
+  - [Example code](#example-code)
+  - [practice problem](#practice-problem)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -240,3 +243,72 @@ fullName = str.includes("foo");
 // output
 console.log(fullName);
 ```
+
+### In the classroom
+
+#### Example code
+
+```js
+// บวกก่อนค่อยนำค่าไปใช้(++i)
+let a = 5;
+let c = ++a;
+console.log(c);
+
+// จะนำค่าไปใช้ก่อนค่อยบวก(i++)
+let b = 10;
+let d = b++;
+console.log(d);
+
+// for loop show the value
+let cars = ["Suzuki", "Hobda", "Toyota"];
+
+let i = 0;
+let nameCars = "";
+for (i = 0; i < cars.length; i++) {
+  nameCars += cars[i] + "<br>";
+}
+
+document.getElementById("car").innerHTML = nameCars;
+
+// codition if else statement
+let x = 10;
+if (x < 10) {
+  console.log(`x มีค่ามากกว่า 10`);
+} else {
+  console.log(`x มีค่าเท่ากับ 10`);
+}
+```
+
+#### practice problem
+
+```js
+let myStatement = prompt();
+let inputNumber = +myStatement; // Solution 1
+let inputNumber = number(myStatement); // Solution 2
+
+if (typeof inputNumber == "number" && !isNaN(inputNumber)) {
+  if (inputNumber >= 5) {
+    let textMore = `ค่าของ myStatement คือ ${inputNumber} มีค่ามากกว่า 5`;
+    document.getElementById("statement").innerHTML = textMore;
+  } else {
+    let textless = `ค่าของ myStatement คือ ${inputNumber} มีค่าน้อยกว่า 5 `;
+    document.getElementById("statement").innerHTML = textless;
+  }
+} else {
+  let textError = `Is not a number`;
+  document.getElementById("statement").innerHTML = textError;
+}
+```
+**Explain this code**
+
+1. statement  
+2. สร้างตัวแปร มาไว้รับค่า myStatement มารับค่าด้วย function 3. prompt()
+4. สร้างตัวแปร inputNumber มาไว้สำหรับแปลงค่าให้เป็นตัวเลข 
+5. (number)
+6. สร้าง function if ( ตรวจสอบค่าว่าเป็นตัวเลขไหม && ถ้าเป็น !isNaN  ){
+7. ถ้าค่าของ myStatement มีค่ามากกว่า 5 ให้แสดงค่านี้ออกมาก
+8. } else {
+9. ถ้าไม่ใช้ให้แสดงค่านี้ออกมา
+10. }
+11. else
+12. ถ้าหากเป็น String ให้แสดงออกมาว่า ไม่ใช้ Number
