@@ -46,3 +46,7 @@ let price;
 let yourPrice = (age2 > 18) ? price = 2000 : price = 3500;
 
 console.log(price);
+
+
+console.log(null || 2 || undefined);
+console.log(1 || null || 2);
