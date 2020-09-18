@@ -4,66 +4,66 @@ let lastname = 'Khongjandee';
 let output;
 
 // concat
-outPut = `This my firstname is ${firstName} andm my lastname is ${lastname}`;
-console.log(outPut);
+output = `This my firstname is ${firstName} andm my lastname is ${lastname}`;
+console.log(output);
 
 // concantination
-outPut = firstName + ' ' + lastname;
-console.log(outPut);
+output = firstName + ' ' + lastname;
+console.log(output);
 
 // Append
-outPut = 'John ';
-outPut += 'Due';
-console.log(outPut);
+output = 'John ';
+output += 'Due';
+console.log(output);
 
 // Length
-outPut = firstName.length;
-console.log(outPut);
+output = firstName.length;
+console.log(output);
 
 // function concat
-outPut = firstName.concat(' ', lastname);
-console.log(outPut);
+output = firstName.concat(' ', lastname);
+console.log(output);
 
 // Change case
-outPut = firstName[3].toUpperCase();
-console.log(outPut);
+output = firstName[3].toUpperCase();
+console.log(output);
 
-outPut = firstName[3].toLowerCase();
-console.log(outPut);
+output = firstName[3].toLowerCase();
+console.log(output);
 
 // indexOf()
-outPut = firstName.indexOf('W');
-console.log(outPut);
+output = firstName.indexOf('W');
+console.log(output);
 
-outPut = firstName.lastIndexOf('s');
-console.log(outPut);
+output = firstName.lastIndexOf('s');
+console.log(output);
 
 // charArt()
-outPut = firstName.charAt('2')
-console.log(outPut);
+output = firstName.charAt('2')
+console.log(output);
 
 // get last char
-outPut = firstName.charAt(firstName.length -1);
-console.log(outPut);
+output = firstName.charAt(firstName.length -1);
+console.log(output);
 
 // substring
-outPut = firstName.substring(0, 4);
-console.log(outPut);
+output = firstName.substring(0, 4);
+console.log(output);
 
 // splite
 const myAddress = '599/5 Chongonothi Yannawa Bangkok 10120';
 
 // each char
-outPut = myAddress.split('');
-console.log(outPut);
+output = myAddress.split('');
+console.log(output);
 
 // each comma
-outPut = myAddress.split(' ');
-console.log(outPut);
+output = myAddress.split(' ');
+console.log(output);
 
-outPut = myAddress.split(',');
-console.log(outPut);
+output = myAddress.split(',');
+console.log(output);
 
 // includes()
-outPut = myAddress.includes('Chongonothi');
-console.log(outPut);
+output = myAddress.includes('Chongonothi');
+console.log(output);
