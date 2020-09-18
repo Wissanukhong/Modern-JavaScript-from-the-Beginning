@@ -17,6 +17,7 @@
 - [Template literals](#template-literals)
 - [Array](#array)
 - [Object literals](#object-literals)
+- [Date and Times](#date-and-times)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -446,4 +447,34 @@ const people = [
 for (let i = 0; i < people.length; i++) {
   console.log(people[i].name + " " + people[i].age);
 }
+```
+
+### Date and Times
+
+```js
+let val;
+
+const today = new Date();
+let birthday = new Date("9-10-1981 11:25:00");
+birthday = new Date("September 10 1981");
+birthday = new Date("9/10/1981");
+
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
+
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1985);
+birthday.setHours(3);
+birthday.setMinutes(30);
+birthday.setSeconds(25);
+
+console.log(birthday);
 ```
