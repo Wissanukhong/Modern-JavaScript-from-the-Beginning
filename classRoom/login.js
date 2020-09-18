@@ -17,3 +17,4 @@ if (name === "admin") {
 } else {
     alert("I don't know you");
 }
+
