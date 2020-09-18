@@ -55,15 +55,15 @@ console.log(number2)
 number2.push(250);
 console.log(number2);
 
-// Take odd from the end
+// Take off from the end
 number2.pop();
 console.log(number2);
 
-// Take odd from the front
+// Take off from the front
 number2.shift();
 console.log(number2);
 
-// Slice value
+// Splice value (start, end)
 number2.splice();
 console.log(number2);
 

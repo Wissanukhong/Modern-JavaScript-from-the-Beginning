@@ -347,17 +347,19 @@ console.log(number2);
 number2.push(250);
 console.log(number2);
 
-// Take odd from the end
+// Take off from the end
 number2.pop();
 console.log(number2);
 
-// Take odd from the front
+// Take off from the front
 number2.shift();
 console.log(number2);
 
-// Slice value
-number2.splice();
-console.log(number2);
+// Splice การเลือกค่าจาก array มาแสดง
+let myAddress = ['599/5', 'Chongonothi', 'Yannawa', 'Bangkok', '10120'];
+let output = myAddress.splice(1, 2)
+console.log(output)
+// 'Chongonothi', 'Yannawa'
 
 // Revers
 number2.reverse();
