@@ -17,6 +17,7 @@
 - [In the classroom](#in-the-classroom)
   - [Example code](#example-code)
   - [practice problem](#practice-problem)
+  - [Login](#login)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -299,16 +300,45 @@ if (typeof inputNumber == "number" && !isNaN(inputNumber)) {
   document.getElementById("statement").innerHTML = textError;
 }
 ```
+
 **Explain this code**
 
-1. statement  
+1. statement
 2. สร้างตัวแปร มาไว้รับค่า myStatement มารับค่าด้วย function 3. prompt()
-4. สร้างตัวแปร inputNumber มาไว้สำหรับแปลงค่าให้เป็นตัวเลข 
-5. (number)
-6. สร้าง function if ( ตรวจสอบค่าว่าเป็นตัวเลขไหม && ถ้าเป็น !isNaN  ){
-7. ถ้าค่าของ myStatement มีค่ามากกว่า 5 ให้แสดงค่านี้ออกมาก
-8. } else {
-9. ถ้าไม่ใช้ให้แสดงค่านี้ออกมา
-10. }
-11. else
-12. ถ้าหากเป็น String ให้แสดงออกมาว่า ไม่ใช้ Number
+3. สร้างตัวแปร inputNumber มาไว้สำหรับแปลงค่าให้เป็นตัวเลข
+4. (number)
+5. สร้าง function if ( ตรวจสอบค่าว่าเป็นตัวเลขไหม && ถ้าเป็น !isNaN ){
+6. ถ้าค่าของ myStatement มีค่ามากกว่า 5 ให้แสดงค่านี้ออกมาก
+7. } else {
+8. ถ้าไม่ใช้ให้แสดงค่านี้ออกมา
+9. }
+10. else
+11. ถ้าหากเป็น String ให้แสดงออกมาว่า ไม่ใช้ Number
+
+#### Login
+
+```js
+let name = prompt("what is your name?");
+
+if (name === "admin") {
+    let password = prompt("what is your password?");
+
+    if (password === "codecamp#5") {
+      alert("Welcome");
+    } else if (password === "" || password === null) {
+      alert("cancel");
+    } else {
+      alert("Wrong password");
+    }
+} else if (name === "" || name === null) {
+  alert("cancel");
+} else {
+  alert("I don't know you");
+}
+```
+
+1. Create variable name to get the value with function promt()
+2. Used if condition for variable name === "admin"
+3. Create let password to get the value with function promt()
+4. Used if condition to check password === "codecamp"
+5. Used else if condition to check password === "" || password === null
