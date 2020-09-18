@@ -16,6 +16,7 @@
   - [Example 🌱](#example--1)
 - [Template literals](#template-literals)
 - [Array](#array)
+- [Object literals](#object-literals)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -356,9 +357,9 @@ number2.shift();
 console.log(number2);
 
 // Splice การเลือกค่าจาก array มาแสดง
-let myAddress = ['599/5', 'Chongonothi', 'Yannawa', 'Bangkok', '10120'];
-let output = myAddress.splice(1, 2)
-console.log(output)
+let myAddress = ["599/5", "Chongonothi", "Yannawa", "Bangkok", "10120"];
+let output = myAddress.splice(1, 2);
+console.log(output);
 // 'Chongonothi', 'Yannawa'
 
 // Revers
@@ -390,4 +391,59 @@ output = number5.sort(function (x, y) {
   return y - x;
 });
 console.log(output);
+```
+
+### Object literals
+
+```js
+// object
+const person = {
+  firstName: "Steve",
+  lastName: "Smith",
+  age: 30,
+  email: "wissanu.kong@SpeechGrammarList.com",
+  hobbies: ["music", "sports"],
+  address: {
+    city: "Chongnonthi",
+    state: "Yannawa",
+  },
+  getBirthYear: function () {
+    return 2020 - this.age;
+  },
+};
+console.log(person);
+
+let val;
+val = person;
+
+// get specific value
+val = person.firstName;
+console.log(val);
+
+val = person["lastName"];
+console.log(val);
+
+val = person.age;
+console.log(val);
+
+val = person.hobbies[1];
+console.log(val);
+
+val = person.address["city"];
+console.log(val);
+
+val = person.getBirthYear();
+console.log(val);
+
+// new object
+const people = [
+  { name: "John", age: 30 },
+  { name: "Smith", age: 25 },
+  { name: "Bob", age: 32 },
+  { name: "Brown", age: 39 },
+];
+
+for (let i = 0; i < people.length; i++) {
+  console.log(people[i].name + " " + people[i].age);
+}
 ```
