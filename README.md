@@ -19,6 +19,7 @@
 - [Object literals](#object-literals)
 - [Date and Times](#date-and-times)
 - [IF Else Statement](#if-else-statement)
+- [Switches case](#switches-case)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -478,10 +479,10 @@ birthday.setMinutes(30);
 birthday.setSeconds(25);
 
 console.log(birthday);
-
 ```
 
 ### IF Else Statement
+
 ```js
 // if statement
 const id = 100;
@@ -552,4 +553,51 @@ if (age > 0 && age < 12) {
 
 // Ternary Operator
 console.log(id === 100 ? "CORRECT" : "INCORRECT");
+```
+
+### Switches case
+
+```js
+// switch case
+const color = "green";
+
+switch (color) {
+  case "red":
+    console.log("Color is red");
+    break;
+  case "blue":
+    console.log("Color is blue");
+    break;
+  default:
+    console.log("color is not red or blue");
+    break;
+}
+
+let day;
+
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tueday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+    break;
+}
+
+console.log(` Today is ${day}`);
 ```
