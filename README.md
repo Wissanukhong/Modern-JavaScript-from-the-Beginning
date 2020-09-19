@@ -9,7 +9,15 @@
 - [Data types 📄](#data-types-)
   - [Primitive types](#primitive-types)
   - [Reference types - object](#reference-types---object)
-  - [Type conversion](#type-conversion)
+- [Type conversion](#type-conversion)
+  - [defalt variable](#defalt-variable)
+  - [number to string](#number-to-string)
+  - [Boolean to string](#boolean-to-string)
+  - [Date to string](#date-to-string)
+  - [Array to String](#array-to-string)
+  - [toString](#tostring)
+  - [String to number](#string-to-number)
+  - [output](#output)
 - [Math (Number)](#math-number)
   - [Example 🌱](#example-)
 - [String](#string)
@@ -68,42 +76,56 @@ const person = {
   age: 28,
 };
 
-// return is object
+// return object
 console.log(typeof person);
 ```
 
-#### Type conversion
+### Type conversion
 
 Type conversion is change the defalt type of thier variable to something.
 
 **Example 🌱**
 
-```js
-// defalt variable
-let val;
+#### defalt variable
 
-// number to string
+`let val;`
+
+#### number to string
+
+```js
 val = String(555);
 console.log(val);
 console.log(typeof val);
 console.log(val.length);
+```
 
-// Boolean to string
+#### Boolean to string
+
+```js
 val = String(true);
 console.log(val);
 console.log(typeof val);
+```
 
-// Date to string
+#### Date to string
+
+```js
 val = String(new Date());
 console.log(val);
 console.log(typeof val);
+```
 
-// Array to String
+#### Array to String
+
+```js
 val = String([1, 2, 3, 4]);
 console.log(val);
 console.log(typeof val);
+```
 
-// toString
+#### toString
+
+```js
 val = (5).toString();
 console.log(val);
 console.log(typeof val);
@@ -111,8 +133,11 @@ console.log(typeof val);
 val = true.toString();
 console.log(val);
 console.log(typeof val);
+```
 
-// String to number
+#### String to number
+
+```js
 val = Number("5");
 val = Number(true);
 val = Number(false);
@@ -124,8 +149,11 @@ val = parseFloat(10.5);
 
 val = Number.parseInt("12354");
 val = Number.parseFloat("12354.25");
+```
 
-// output
+#### output
+
+```js
 console.log(val);
 console.log(typeof val);
 console.log(val.toFixed());
@@ -133,7 +161,7 @@ console.log(val.toFixed());
 
 > **Note 📑**
 >
-> > `.toFixed()` is only work for number  
+> > `.toFixed()` is only work for number
 > > `.length()` is only work for string
 
 ### Math (Number)
@@ -148,7 +176,7 @@ console.log(val.toFixed());
 | max()    | Used to find the greater value between the given numbers   |
 | min()    | Used to find the smaller value between the given numbers   |
 
-you can read this for method  
+you can read this for method
 [📌 JavaScript :: Math Class](http://code.function.in.th/javascript/math)
 
 #### Example 🌱
