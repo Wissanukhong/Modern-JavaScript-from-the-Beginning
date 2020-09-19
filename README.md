@@ -20,6 +20,7 @@
 - [Date and Times](#date-and-times)
 - [IF Else Statement](#if-else-statement)
 - [Switches case](#switches-case)
+- [Function](#function)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -600,4 +601,55 @@ switch (new Date().getDay()) {
 }
 
 console.log(` Today is ${day}`);
+```
+
+### Function
+
+Function is the block of code  
+
+1. Funciton declaration
+2. Function Expression
+
+```js
+// Function declarations
+function greet() {
+  console.log("Hello");
+}
+
+greeting();
+
+// Function Expressions
+const square = function (x = 3) {
+  return x * x;
+};
+
+console.log(square());
+
+// Immidiatley Invokable Function Expression - IIFEs
+(function () {
+  console.log("Start here...");
+})();
+
+// Invokable Function Expression = arrow function
+(() => {
+  console.log("hello");
+})();
+
+// Property Method
+const todo = {
+  add: function () {
+    console.log("Add todo....");
+  },
+  edit: function (id) {
+    console.log(`Edit todo ${id}`);
+  },
+};
+
+todo.delete = function () {
+  console.log("Delete todo");
+};
+
+todo.add();
+todo.edit(22);
+todo.delete();
 ```
