@@ -31,6 +31,7 @@
 - [Function](#function)
 - [General loop](#general-loop)
 - [Window Object](#window-object)
+- [Global and Block scope variables](#global-and-block-scope-variables)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -836,4 +837,29 @@ val = window.navigator.language;
 
 // output
 console.log(val);
+```
+
+### Global and Block scope variables
+
+1. Global variable can used all the programs
+2. The Block scope can used only there scope 
+
+```js
+// Global scope
+var a = 1;
+
+// Block scope
+let b = 2;
+const c = 3;
+
+// function scope
+function test() {
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log("Function scope: ", a, b, c);
+}
+test();
+
+console.log("Global Scope: ", a, b, c);
 ```
