@@ -30,6 +30,7 @@
 - [Switches case](#switches-case)
 - [Function](#function)
 - [General loop](#general-loop)
+- [Window Object](#window-object)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -773,4 +774,66 @@ for (let x in user) {
 // firstName : John
 // lastName : Doe
 // age : 40
+```
+
+### Window Object
+
+```js
+// WINDOW METHODS / OBJECTS / PROPERTIES
+
+// Alert
+alert("Hello World");
+
+// Prompt
+const input = prompt();
+alert(input);
+
+// Confirm
+if (confirm("Are you sure")) {
+  console.log("YES");
+} else {
+  console.log("NO");
+}
+
+let val;
+
+// Outter height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+// Inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll points
+val = window.scrollY;
+val = window.scrollX;
+
+// Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+// Redirect
+window.location.href = "http://google.com";
+Reload;
+window.location.reload();
+
+// History Object
+window.history.go(-2);
+val = window.history.length;
+
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
+
+// output
+console.log(val);
 ```
