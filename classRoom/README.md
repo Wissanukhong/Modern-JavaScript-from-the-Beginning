@@ -1,6 +1,6 @@
 # In the classroom
 
-#### Example code
+## Example code
 
 ```js
 // บวกก่อนค่อยนำค่าไปใช้(++i)
@@ -68,7 +68,7 @@ if (typeof inputNumber == "number" && !isNaN(inputNumber)) {
 10. else
 11. ถ้าหากเป็น String ให้แสดงออกมาว่า ไม่ใช้ Number
 
-#### Login
+## Login
 
 ```js
 let name = prompt("what is your name?");
@@ -95,3 +95,23 @@ if (name === "admin") {
 3. Create let password to get the value with function promt()
 4. Used if condition to check password === "codecamp"
 5. Used else if condition to check password === "" || password === null
+
+## This keyword
+
+```js
+let user = {
+  name: "John",
+  go: function () {
+    console.log(this.name);
+  }
+};
+user.go(); // output: John
+```
+
+**Explan**
+1. Create object user 
+2. Assing the key is name
+3. Assign the value : 'John'
+4. Create function go inside the object with anonymous function 
+5. Create this.name key word 
+6. Call the function by user.go();

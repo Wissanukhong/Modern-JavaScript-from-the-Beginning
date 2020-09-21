@@ -2,7 +2,7 @@
 let user = {
     name: 'John',
     go: function () {
-        alert(this.name)
+        console.log(this.name)
     }
 }
 user.go(); // output: John
