@@ -32,6 +32,8 @@
 - [General loop](#general-loop)
 - [Window Object](#window-object)
 - [Global and Block scope variables](#global-and-block-scope-variables)
+- [DOM](#dom)
+  - [Single Element](#single-element)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
@@ -842,7 +844,7 @@ console.log(val);
 ### Global and Block scope variables
 
 1. Global variable can used all the programs
-2. The Block scope can used only there scope 
+2. The Block scope can used only there scope
 
 ```js
 // Global scope
@@ -862,4 +864,44 @@ function test() {
 test();
 
 console.log("Global Scope: ", a, b, c);
+```
+
+### DOM
+
+#### Single Element
+
+```js
+// document.getElementById()
+console.log(document.getElementById("task-title"));
+
+// Get things from the element
+console.log(document.getElementById("task-title").id);
+console.log(document.getElementById("task-title").className);
+
+const taskTitle = document.getElementById("task-title");
+
+// Change styling
+// first style
+document.getElementById("task-title").style.background = "#333";
+// Second style
+taskTitle.style.color = "#fff";
+taskTitle.style.padding = "5px";
+taskTitle.style.display = "none";
+
+// Change content
+taskTitle.textContent = "Task List";
+taskTitle.innerText = "My Tasks";
+taskTitle.innerHTML = '<span style="color:red">Task List</span>';
+
+// querySelector
+document.querySelector("#task-title"); // query by id
+document.querySelector(".task-title"); // query by className
+document.querySelector("h5"); // query by tag element
+
+// quierySelector with pseudo classes
+document.querySelector("li:last-child").style.color = "red";
+document.querySelector("li:nth-child").style.color = "green";
+document.querySelector("li:nth-child(3)").style.color = "yellow";
+document.querySelector("li:nth-child(3)").textContent = "Hello world";
+document.querySelector("li:nth-child(3)").style.background = "#ccc";
 ```
