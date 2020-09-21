@@ -1,25 +1,25 @@
 // Workshop  Problem 1
-// let user = {
-//     name: 'John',
-//     go: function () {
-//         alert(this.name)
-//     }
-// }
-// user.go();
-// output: John
+let user = {
+    name: 'John',
+    go: function () {
+        alert(this.name)
+    }
+}
+user.go(); // output: John
+
 
 // Workshop  Problem 2
-// function makeUser() {
-//     return {
-//         name: "John",
-//         ref: this
-//     };
-// };
+function makeUser() {
+    return {
+        name: "John",
+        ref: this
+    };
+};
 
-// let user = makeUser();
+let user = makeUser();
 
-// console.log(user.ref.name);
-// output: undefined
+console.log(user.ref.name); // output: undefined
+
 
 // Workshop  Problem 3
 let calculator = {
