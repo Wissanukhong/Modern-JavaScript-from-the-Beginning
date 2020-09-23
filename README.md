@@ -22,7 +22,20 @@
   - [Math (Number)](#math-number)
     - [Example 🌱](#example-)
   - [String](#string)
-    - [Example 🌱](#example--1)
+    - [concat](#concat)
+    - [concantination](#concantination)
+    - [Append](#append)
+    - [Length](#length)
+    - [function concat](#function-concat)
+    - [Change case](#change-case)
+    - [indexOf()](#indexof)
+    - [charArt()](#charart)
+    - [get last char](#get-last-char)
+    - [substring](#substring)
+    - [splite](#splite)
+    - [each char](#each-char)
+    - [each comma](#each-comma)
+    - [includes()](#includes)
   - [Template literals](#template-literals)
   - [Array](#array)
   - [Object literals](#object-literals)
@@ -57,7 +70,9 @@
 ## Variable💡
 
 ### var is global variable
+
 ### let is Block variable
+
 ### const is constant variable(We can chenge the value in const with object)
 
 ## Data types 📄
@@ -227,76 +242,116 @@ console.log(val);
 | .replace('Brad')    | Used to replace the value                                                                                      |
 | .includes()         | Used to find the value in the array but it will return true and false                                          |
 
-#### Example 🌱
-
 ```js
 let firstName = "Wissanu";
 let lastname = "Khongjandee";
 
 let output;
+```
 
-// concat
+#### concat
+
+```js
 output = `This my firstname is ${firstName} andm my lastname is ${lastname}`;
 console.log(output);
+```
 
-// concantination
+#### concantination
+
+```js
 output = firstName + " " + lastname;
 console.log(output);
+```
 
-// Append
+#### Append
+
+```js
 output = "John ";
 output += "Due";
 console.log(output);
+```
 
-// Length
+#### Length
+
+```js
 output = firstName.length;
 console.log(output);
+```
 
-// function concat
+#### function concat
+
+```js
 output = firstName.concat(" ", lastname);
 console.log(output);
+```
 
-// Change case
+#### Change case
+
+```js
 output = firstName[3].toUpperCase();
 console.log(output);
 
 output = firstName[3].toLowerCase();
 console.log(output);
+```
 
-// indexOf()
+#### indexOf()
+
+```js
 output = firstName.indexOf("W");
 console.log(output);
 
 output = firstName.lastIndexOf("s");
 console.log(output);
+```
 
-// charArt()
+#### charArt()
+
+```js
 output = firstName.charAt("2");
 console.log(output);
+```
 
-// get last char
+#### get last char
+
+```js
 output = firstName.charAt(firstName.length - 1);
 console.log(output);
+```
 
-// substring
+#### substring
+
+```js
 output = firstName.substring(0, 4);
 console.log(output);
+```
 
-// splite
+#### splite
+
+```js
 const myAddress = "599/5 Chongonothi Yannawa Bangkok 10120";
+```
 
-// each char
+#### each char
+
+```js
 output = myAddress.split("");
 console.log(output);
+```
 
-// each comma
+#### each comma
+
+```js
 output = myAddress.split(" ");
 console.log(output);
 
 output = myAddress.split(",");
 console.log(output);
+```
 
-// includes()
+#### includes()
+
+```js
 output = myAddress.includes("Chongonothi");
 console.log(output);
 ```
@@ -332,7 +387,7 @@ document.body.innerHTML = es5;
 // with es6
 let es6 = `
 <h1>ES6</h1>
-<ul>    
+<ul>
     <li>Name: ${name}</li>
     <li>age: ${age}</li>
     <li>job: ${job}</li>
