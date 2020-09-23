@@ -16,10 +16,10 @@ for (let x in person) {
 }
 
 // new array
-const cars = ['Toyota', 'Honda', 'Nissan']
+const cars = ['Toyota', 'Honda', 'Nissan'];
 
 // .map
-const newCars = cars.map(car => `${car} has 4 wheels`)
+const newCars = cars.map(car => `${car} has 4 wheels`);
 
 console.log(cars)
 console.log(newCars)
