@@ -6,38 +6,39 @@
 - [introduction to javascript💡](#introduction-to-javascript)
 - [How to name in variables💡](#how-to-name-in-variables)
 - [Variable💡](#variable)
+  - [var is global variable](#var-is-global-variable)
+  - [let is Block variable](#let-is-block-variable)
+  - [const is constant variable(We can chenge the value in const with object)](#const-is-constant-variablewe-can-chenge-the-value-in-const-with-object)
 - [Data types 📄](#data-types-)
   - [Primitive types](#primitive-types)
   - [Reference types - object](#reference-types---object)
-- [Type conversion](#type-conversion)
-  - [defalt variable](#defalt-variable)
-  - [number to string](#number-to-string)
-  - [Boolean to string](#boolean-to-string)
-  - [Date to string](#date-to-string)
-  - [Array to String](#array-to-string)
-  - [toString](#tostring)
-  - [String to number](#string-to-number)
-  - [output](#output)
-- [Math (Number)](#math-number)
-  - [Example 🌱](#example-)
-- [String](#string)
-  - [Example 🌱](#example--1)
-- [Template literals](#template-literals)
-- [Array](#array)
-- [Object literals](#object-literals)
-- [Date and Times](#date-and-times)
-- [IF Else Statement](#if-else-statement)
-- [Switches case](#switches-case)
-- [Function](#function)
-- [General loop](#general-loop)
-- [Window Object](#window-object)
-- [Global and Block scope variables](#global-and-block-scope-variables)
-- [DOM](#dom)
-  - [Single Element](#single-element)
+  - [Type conversion](#type-conversion)
+    - [number to string](#number-to-string)
+    - [Boolean to string](#boolean-to-string)
+    - [Date to string](#date-to-string)
+    - [Array to String](#array-to-string)
+    - [toString](#tostring)
+    - [String to number](#string-to-number)
+  - [Math (Number)](#math-number)
+    - [Example 🌱](#example-)
+  - [String](#string)
+    - [Example 🌱](#example--1)
+  - [Template literals](#template-literals)
+  - [Array](#array)
+  - [Object literals](#object-literals)
+  - [Date and Times](#date-and-times)
+  - [IF Else Statement](#if-else-statement)
+  - [Switches case](#switches-case)
+  - [Function](#function)
+  - [General loop](#general-loop)
+  - [Window Object](#window-object)
+  - [Global and Block scope variables](#global-and-block-scope-variables)
+  - [DOM](#dom)
+    - [Single Element](#single-element)
 
 [This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
 
-### introduction to javascript💡
+## introduction to javascript💡
 
 1. Basics & Fundamentals: Data types, let & const variables, functions, conditionals, loops, object literals, arrays, etc
 2. DOM Manipulation: Selectors, traversing the DOM, show / hide, creating & removing elements, event listeners
@@ -45,7 +46,7 @@
 4. Async JS: Ajax & XHR, Fetch API, callbacks, promises, async /await ES2015 +: Arrow functions, template strings, generators, iterators, maps & sets, symbols & more
 5. JavaScript Patterns: Module, Factory, State, Observer, Mediator, Singleton Other: Local & session storage, regular expressions, try catch error handling 7. 10 Projects of all kinds
 
-### How to name in variables💡
+## How to name in variables💡
 
 - `var firstName = 'John';` // Camel case
 
@@ -53,17 +54,17 @@
 
 - `var FirstName = 'Tom';` // Pascal case
 
-### Variable💡
+## Variable💡
 
-1. var is global variable
-2. let is Block variable
-3. const is constant variable(We can chenge the value in const with object)
+### var is global variable
+### let is Block variable
+### const is constant variable(We can chenge the value in const with object)
 
-### Data types 📄
+## Data types 📄
 
 Data types basically specify what kind of data can be stored and manipulated within a program. There are six basic data types in JavaScript which can be divided into three main categories: primitive (or primary), composite (or reference), and special data types. String, Number, and Boolean are primitive data types.
 
-#### Primitive types
+### Primitive types
 
 1. String
 2. Number
@@ -72,7 +73,7 @@ Data types basically specify what kind of data can be stored and manipulated wit
 5. Undefined
 6. Symbol (ES6)
 
-#### Reference types - object
+### Reference types - object
 
 ```js
 const person = {
@@ -87,12 +88,6 @@ console.log(typeof person);
 ### Type conversion
 
 Type conversion is change the defalt type of thier variable to something.
-
-**Example 🌱**
-
-#### defalt variable
-
-`let val;`
 
 #### number to string
 
@@ -143,24 +138,41 @@ console.log(typeof val);
 
 ```js
 val = Number("5");
-val = Number(true);
-val = Number(false);
-val = Number(null);
-val = Number("hello");
-
-val = parseInt("100");
-val = parseFloat(10.5);
-
-val = Number.parseInt("12354");
-val = Number.parseFloat("12354.25");
-```
-
-#### output
-
-```js
 console.log(val);
 console.log(typeof val);
-console.log(val.toFixed());
+
+val = Number(true);
+console.log(val);
+console.log(typeof val);
+
+val = Number(false);
+console.log(val);
+console.log(typeof val);
+
+val = Number(null);
+console.log(val);
+console.log(typeof val);
+
+val = Number("hello");
+console.log(val);
+console.log(typeof val);
+
+val = parseInt("100");
+console.log(val);
+console.log(typeof val);
+
+val = parseFloat(10.5);
+console.log(val);
+console.log(typeof val);
+
+val = Number.parseInt("12354");
+console.log(val);
+console.log(typeof val);
+
+val = Number.parseFloat("12354.25");
+console.log(val);
+console.log(typeof val);
+console.log(val.toFixed()); // Only work for number
 ```
 
 > **Note 📑**
