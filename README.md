@@ -38,6 +38,23 @@
     - [includes()](#includes)
   - [Template literals](#template-literals)
   - [Array](#array)
+    - [create new Array](#create-new-array)
+    - [Change case with loop array](#change-case-with-loop-array)
+    - [Array length](#array-length)
+    - [check something in Array it will return 'ture' and 'False'](#check-something-in-array-it-will-return-ture-and-false)
+    - [Get single value](#get-single-value)
+    - [Insert value into array (It is replace on the old value)](#insert-value-into-array-it-is-replace-on-the-old-value)
+    - [Find index](#find-index)
+    - [Add on to front](#add-on-to-front)
+    - [Add on to end](#add-on-to-end)
+    - [Take off from the end](#take-off-from-the-end)
+    - [Take off from the front](#take-off-from-the-front)
+    - [Splice การเลือกค่าจาก array มาแสดง](#splice-การเลือกค่าจาก-array-มาแสดง)
+    - [Revers](#revers)
+    - [Revers workshop](#revers-workshop)
+    - [sorting string](#sorting-string)
+    - [sorting number](#sorting-number)
+    - [Revers sorting number](#revers-sorting-number)
   - [Object literals](#object-literals)
   - [Date and Times](#date-and-times)
   - [IF Else Statement](#if-else-statement)
@@ -399,8 +416,9 @@ document.body.innerHTML = es6;
 
 ### Array
 
+#### create new Array
+
 ```js
-// create new Array
 const number = [43, 56, 33, 23, 44, 36];
 console.log(number);
 
@@ -412,84 +430,131 @@ console.log(fruit);
 
 // Output
 let output;
+```
 
-// Change case with loop array
+#### Change case with loop array
+
+```js
 const fruits = ["Banana", "Orange", "Pear", "apple"];
 
 for (i = 0; i < fruit.length; i++) {
   const changeCase = fruit[i].toUpperCase();
   console.log(changeCase);
 }
+```
 
-// Array length
+#### Array length
+
+```js
 const allFruit = ["Banana", "Orange", "Pear", "apple"];
 console.log(allFruit.length);
+```
 
-// check something in Array it will return 'ture' and 'False'
+#### check something in Array it will return 'ture' and 'False'
+
+```js
 const allFruit1 = ["Banana", "Orange", "Pear", "apple"];
 const checkArray = Array.isArray("Banana");
 console.log(checkArray);
+```
 
-// Get single value
+#### Get single value
+
+```js
 const allFruit2 = ["Banana", "Orange", "Pear", "apple"];
 console.log(allFruit2[2]);
+```
 
-// Insert value into array (It is replace on the old value)
+#### Insert value into array (It is replace on the old value)
+
+```js
 const allFruit3 = ["Banana", "Orange", "Pear", "apple"];
 allFruit3[2] = "Cake";
 console.log(allFruit3);
+```
 
-// Find index
+#### Find index
+
+```js
 const number2 = [43, 56, 33, 23, 44, 36];
 output = number2.indexOf(56);
 console.log(output);
+```
 
-// Add on to front
+#### Add on to front
+
+```js
 number2.unshift(120);
 console.log(number2);
+```
 
-// Add on to end
+#### Add on to end
+
+```js
 number2.push(250);
 console.log(number2);
+```
 
-// Take off from the end
+#### Take off from the end
+
+```js
 number2.pop();
 console.log(number2);
+```
 
-// Take off from the front
+#### Take off from the front
+
+```js
 number2.shift();
 console.log(number2);
+```
 
-// Splice การเลือกค่าจาก array มาแสดง
+#### Splice การเลือกค่าจาก array มาแสดง
+
+```js
 let myAddress = ["599/5", "Chongonothi", "Yannawa", "Bangkok", "10120"];
 let output = myAddress.splice(1, 2);
-console.log(output);
-// 'Chongonothi', 'Yannawa'
+console.log(output); // 'Chongonothi', 'Yannawa'
+```
 
-// Revers
+#### Revers
+
+```js
 number2.reverse();
 console.log(number2);
+```
 
-// Revers workshop
+#### Revers workshop
+
+```js
 let myName = "Wissanu Khongjandee";
 let sliceMyName = myName.split("");
 console.log(sliceMyName);
 let reversMyName = sliceMyName.reverse();
 console.log(reversMyName);
+```
 
-// sorting string
+#### sorting string
+
+```js
 const allFruit4 = ["Banana", "Orange", "Pear", "Apple"];
 output = allFruit4.sort();
 console.log(output);
+```
 
-// sorting number
+#### sorting number
+
+```js
 const number4 = [43, 56, 33, 23, 44, 36];
 output = number4.sort(function (x, y) {
   return x - y;
 });
 console.log(output);
+```
 
-// Revers sorting number
+#### Revers sorting number
+
+```js
 const number5 = [43, 56, 33, 23, 44, 36];
 output = number5.sort(function (x, y) {
   return y - x;
@@ -595,7 +660,7 @@ if (id == 101) {
   console.log("INCORRECT");
 }
 
-// Not Equak to
+// Not Equal to
 if (id != 101) {
   console.log("CORRECT");
 } else {
