@@ -56,8 +56,21 @@
     - [sorting number](#sorting-number)
     - [Revers sorting number](#revers-sorting-number)
   - [Object literals](#object-literals)
+    - [object](#object)
+    - [get specific value](#get-specific-value)
+    - [new object](#new-object)
   - [Date and Times](#date-and-times)
-  - [IF Else Statement](#if-else-statement)
+  - [Interation](#interation)
+      - [If else statement](#if-else-statement)
+      - [Equal to](#equal-to)
+      - [Not Equal to](#not-equal-to)
+      - [Equal to value & Type](#equal-to-value--type)
+      - [Not equal to value & Type](#not-equal-to-value--type)
+      - [Test if undefined](#test-if-undefined)
+      - [Greater or less than](#greater-or-less-than)
+      - [if else workshop](#if-else-workshop)
+      - [Logical operator](#logical-operator)
+  - [Ternary Operator](#ternary-operator)
   - [Switches case](#switches-case)
   - [Function](#function)
   - [General loop](#general-loop)
@@ -564,8 +577,9 @@ console.log(output);
 
 ### Object literals
 
+#### object
+
 ```js
-// object
 const person = {
   firstName: "Steve",
   lastName: "Smith",
@@ -584,8 +598,11 @@ console.log(person);
 
 let val;
 val = person;
+```
 
-// get specific value
+#### get specific value
+
+```js
 val = person.firstName;
 console.log(val);
 
@@ -603,8 +620,11 @@ console.log(val);
 
 val = person.getBirthYear();
 console.log(val);
+```
 
-// new object
+#### new object
+
+```js
 const people = [
   { name: "John", age: 30 },
   { name: "Smith", age: 25 },
@@ -646,56 +666,68 @@ birthday.setSeconds(25);
 
 console.log(birthday);
 ```
+### Interation
 
-### IF Else Statement
+##### If else statement
 
+`const id = 100;`
+
+##### Equal to
 ```js
-// if statement
-const id = 100;
-
-// Equal to
 if (id == 101) {
   console.log("CORRECT");
 } else {
   console.log("INCORRECT");
 }
+```
 
-// Not Equal to
+##### Not Equal to
+```js
 if (id != 101) {
   console.log("CORRECT");
 } else {
   console.log("INCORRECT");
 }
+```
 
-// Equal to value & Type
+##### Equal to value & Type
+
+```js
 if (id === 100) {
   console.log("CORRECT");
 } else {
   console.log("INCORRECT");
 }
+```
 
-// Not equal to value & Type
+##### Not equal to value & Type
+```js
 if (id !== 100) {
   console.log("CORRECT");
 } else {
   console.log("INCORRECT");
 }
+```
 
-// Test if undefined
+##### Test if undefined
+```js
 if (typeof id !== "undefined") {
   console.log(`The ID is ${id}`);
 } else {
   console.log(`NO ID`);
 }
-
-// Greater or less than
+```
+##### Greater or less than
+```js
 if (id > 200) {
   console.log("CORRECT");
 } else {
   console.log("INCORRECT");
 }
+```
+##### if else workshop
 
-// IF ELSE
+```js
 const color = "red";
 if (color === "red") {
   console.log("color is red");
@@ -704,8 +736,11 @@ if (color === "red") {
 } else {
   console.log("Color is not red or blue");
 }
+```
 
-// Logical operator
+##### Logical operator
+
+```js
 const name = "Steve";
 const age = 20;
 
@@ -716,8 +751,10 @@ if (age > 0 && age < 12) {
 } else {
   console.log(`${name} is an aduit`);
 }
+```
 
-// Ternary Operator
+### Ternary Operator
+```js
 console.log(id === 100 ? "CORRECT" : "INCORRECT");
 ```
 
