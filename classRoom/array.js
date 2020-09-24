@@ -35,14 +35,24 @@ console.log(carsNew)
 // filter 
 // Need some value from array or object 
 const people = [
-    {name: 'wissanu', age: 15},
-    {name: 'Gab', age: 30},
-    {name: 'Son', age: 45},
-    {name: 'Tare', age: 33}
+    { name: 'wissanu', age: 15 },
+    { name: 'Gab', age: 30 },
+    { name: 'Son', age: 45 },
+    { name: 'Tare', age: 33 }
 ]
 
 const result = people.filter(function (people) {
-    return people.age > 30 ;
+    return people.age > 30;
 });
 
 console.log(result);
+
+// Change to uppercase 
+let myString = 'wissanu';
+let newMyString = myString.toUpperCase();
+console.log(newMyString);
+
+// odd and even
+const array1 = [1, 3, 4, 5, 6, 7, 8]
+const array2 = array1.map(indexNumber => indexNumber % 2 == 0 ? 'even' : 'odd');
+console.log(array2);// output ["odd", "odd", "even", "odd", "even", "odd", "even"]
