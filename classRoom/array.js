@@ -56,3 +56,46 @@ console.log(newMyString);
 const array1 = [1, 3, 4, 5, 6, 7, 8]
 const array2 = array1.map(indexNumber => indexNumber % 2 == 0 ? 'even' : 'odd');
 console.log(array2);// output ["odd", "odd", "even", "odd", "even", "odd", "even"]
+
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5');
+const select = document.querySelector('select');
+
+// Clear input
+taskInput.value = '';
+
+// form.addEventListener('submit', runEvent);
+
+// Keydown
+//taskInput.addEventListener('keydown', runEvent);
+// Keydown
+// taskInput.addEventListener('keyup', runEvent);
+// Keypress
+// taskInput.addEventListener('keypress', runEvent);
+// Focus
+// taskInput.addEventListener('focus', runEvent);
+// Blur
+// taskInput.addEventListener('blur', runEvent);
+// Cut
+// taskInput.addEventListener('cut', runEvent);
+// Paste
+// taskInput.addEventListener('paste', runEvent);
+// Input
+// taskInput.addEventListener('input', runEvent);
+// Change
+select.addEventListener('change', runEvent);
+
+function runEvent(e){
+  console.log(`EVENT TYPE: ${e.type}`);
+
+  //console.log(e.target.value);
+
+  // heading.innerText = e.target.value;
+
+  // Get input value
+  // console.log(taskInput.value);
+
+  // e.preventDefault();
+}
