@@ -38,6 +38,13 @@ DOM is document Object Model and javaScript can be used to read/write manipulate
     - [Change content](#change-content)
     - [document.querySelector()](#documentqueryselector)
   - [DOM Selector for mutiple Elements](#dom-selector-for-mutiple-elements)
+    - [document.getElementsByClassName](#documentgetelementsbyclassname)
+    - [document.getElementsByTagName](#documentgetelementsbytagname)
+    - [conver HTML collection into array](#conver-html-collection-into-array)
+    - [reverse](#reverse)
+    - [forEach](#foreach)
+    - [document.querySelectorAll](#documentqueryselectorall)
+    - [Odd and Even](#odd-and-even)
   - [Traversing The DOM](#traversing-the-dom)
   - [Creating Elements](#creating-elements)
   - [Removing & Replacing Elements](#removing--replacing-elements)
@@ -279,6 +286,71 @@ document.querySelector("h5"); // query selector by HTML Tag
 ```
 
 ## DOM Selector for mutiple Elements
+
+### document.getElementsByClassName
+
+```js
+let items = document.getElementsByClassName("collection-item");
+console.log(items);
+```
+
+### document.getElementsByTagName
+
+```js
+let lis = document.getElementsByTagName("li");
+console.log(lis);
+console.log(lis[0]);
+lis[0].style.color = "red";
+lis[3].textContent = "Hello";
+```
+
+### conver HTML collection into array
+
+```js
+lis = Array.from(lis);
+```
+
+### reverse
+
+```js
+lis.reverse();
+console.log(lis);
+```
+
+### forEach
+
+```js
+lis.forEach(function (li, index) {
+  li.textContent = `${index}: Hello`;
+});
+```
+
+### document.querySelectorAll
+
+```js
+document.querySelectorAll;
+const items = document.querySelectorAll("ul.collection li.collection-item");
+console.log(items);
+
+items.forEach(function (item, index) {
+  item.textContent = `${index}: Hello`;
+});
+```
+
+### Odd and Even
+
+```js
+const liOdd = document.querySelectorAll("li:nth-child(odd)");
+const liEven = document.querySelectorAll("li:nth-child(even)");
+
+liOdd.forEach(function (li) {
+  li.style.background = "#ccc";
+});
+
+liEven.forEach(function () {
+  li.style.background = "#fff";
+});
+```
 
 ## Traversing The DOM
 
