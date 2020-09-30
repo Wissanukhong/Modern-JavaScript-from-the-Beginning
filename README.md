@@ -10,6 +10,7 @@
   - [let is Block variable](#let-is-block-variable)
   - [const is constant variable(We can chenge the value in const with object)](#const-is-constant-variablewe-can-chenge-the-value-in-const-with-object)
 - [Data types 📄](#data-types-)
+
   - [Primitive types](#primitive-types)
   - [Reference types - object](#reference-types---object)
   - [Type conversion](#type-conversion)
@@ -61,15 +62,15 @@
     - [new object](#new-object)
   - [Date and Times](#date-and-times)
   - [Interation](#interation)
-      - [If else statement](#if-else-statement)
-      - [Equal to](#equal-to)
-      - [Not Equal to](#not-equal-to)
-      - [Equal to value & Type](#equal-to-value--type)
-      - [Not equal to value & Type](#not-equal-to-value--type)
-      - [Test if undefined](#test-if-undefined)
-      - [Greater or less than](#greater-or-less-than)
-      - [if else workshop](#if-else-workshop)
-      - [Logical operator](#logical-operator)
+    - [If else statement](#if-else-statement)
+    - [Equal to](#equal-to)
+    - [Not Equal to](#not-equal-to)
+    - [Equal to value & Type](#equal-to-value--type)
+    - [Not equal to value & Type](#not-equal-to-value--type)
+    - [Test if undefined](#test-if-undefined)
+    - [Greater or less than](#greater-or-less-than)
+    - [if else workshop](#if-else-workshop)
+    - [Logical operator](#logical-operator)
   - [Ternary Operator](#ternary-operator)
   - [Switches case](#switches-case)
   - [Function](#function)
@@ -77,9 +78,9 @@
   - [Window Object](#window-object)
   - [Global and Block scope variables](#global-and-block-scope-variables)
 
-- [DOM](https://github.com/Wissanukhong/Modern-JavaScript-from-the-Biginning/blob/master/2.Dom/DOM.md)
+- [DOM ==> Go to next page!!](https://github.com/Wissanukhong/Modern-JavaScript-from-the-Biginning/blob/master/2.Dom/DOM.md)
 
-[This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 🎓
+[This is my summary javaScript cheat sheet](https://docs.google.com/spreadsheets/d/15doGb6DQk_ULSSX6rGCPuz110nyPoUi35FM1fwBvT_s/edit?usp=sharing) 💾
 
 ## introduction to javascript💡
 
@@ -238,9 +239,7 @@ console.log(val.toFixed()); // Only work for number
 | min()    | Used to find the smaller value between the given numbers   |
 
 you can read this for method
-[📌 JavaScript :: Math Class](http://code.function.in.th/javascript/math)
-
-#### Example 🌱
+[📌 JavaScript :: Math Class](http://code.function.in.th/javascript/math)****
 
 ```js
 let val;
@@ -666,6 +665,7 @@ birthday.setSeconds(25);
 
 console.log(birthday);
 ```
+
 ### Interation
 
 ##### If else statement
@@ -673,6 +673,7 @@ console.log(birthday);
 `const id = 100;`
 
 ##### Equal to
+
 ```js
 if (id == 101) {
   console.log("CORRECT");
@@ -682,6 +683,7 @@ if (id == 101) {
 ```
 
 ##### Not Equal to
+
 ```js
 if (id != 101) {
   console.log("CORRECT");
@@ -701,6 +703,7 @@ if (id === 100) {
 ```
 
 ##### Not equal to value & Type
+
 ```js
 if (id !== 100) {
   console.log("CORRECT");
@@ -710,6 +713,7 @@ if (id !== 100) {
 ```
 
 ##### Test if undefined
+
 ```js
 if (typeof id !== "undefined") {
   console.log(`The ID is ${id}`);
@@ -717,7 +721,9 @@ if (typeof id !== "undefined") {
   console.log(`NO ID`);
 }
 ```
+
 ##### Greater or less than
+
 ```js
 if (id > 200) {
   console.log("CORRECT");
@@ -725,6 +731,7 @@ if (id > 200) {
   console.log("INCORRECT");
 }
 ```
+
 ##### if else workshop
 
 ```js
@@ -754,6 +761,7 @@ if (age > 0 && age < 12) {
 ```
 
 ### Ternary Operator
+
 ```js
 console.log(id === 100 ? "CORRECT" : "INCORRECT");
 ```
