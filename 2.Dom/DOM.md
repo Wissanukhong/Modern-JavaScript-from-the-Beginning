@@ -32,6 +32,11 @@ DOM is document Object Model and javaScript can be used to read/write manipulate
     - [forEach loop in array](#foreach-loop-in-array)
     - [forloop loop the value in array](#forloop-loop-the-value-in-array)
   - [DOM Selector for single Elements](#dom-selector-for-single-elements)
+    - [Document.getElemantById('ID')](#documentgetelemantbyidid)
+    - [Get things from the element](#get-things-from-the-element)
+    - [Change style](#change-style)
+    - [Change content](#change-content)
+    - [document.querySelector()](#documentqueryselector)
   - [DOM Selector for mutiple Elements](#dom-selector-for-mutiple-elements)
   - [Traversing The DOM](#traversing-the-dom)
   - [Creating Elements](#creating-elements)
@@ -233,6 +238,45 @@ for (let i = 0; i < scriptsArray.length; i++) {
 ```
 
 ## DOM Selector for single Elements
+
+### Document.getElemantById('ID')
+
+```js
+document.getElementById("main");
+```
+
+### Get things from the element
+
+```js
+document.getElementById("main").id;
+console.log(document.getElementsByClassName("card-content")[0]);
+```
+
+### Change style
+
+```js
+document.getElementById("task-title").style.background = "#333";
+document.getElementById("task-title").style.color = "#fff";
+document.getElementById("task-title").style.padding = "5px";
+document.getElementById("task-title").style.textTransform = "uppercase";
+```
+
+### Change content
+
+```js
+document.getElementById("task-title").textContent = "Task List";
+document.getElementById("task-title").innerText = "My task";
+document.getElementById("task-title").innerHTML =
+  '<span style="color:red">Task List</span>';
+```
+
+### document.querySelector()
+
+```js
+document.querySelector("#task-title"); // query selector by ID
+document.querySelector(".card-title"); // query selector by className
+document.querySelector("h5"); // query selector by HTML Tag
+```
 
 ## DOM Selector for mutiple Elements
 

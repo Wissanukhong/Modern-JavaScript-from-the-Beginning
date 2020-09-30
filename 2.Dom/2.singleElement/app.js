@@ -13,3 +13,10 @@ document.getElementById('task-title').style.textTransform = 'uppercase';
 
 // Change content
 document.getElementById('task-title').textContent = 'Task List';
+document.getElementById('task-title').innerText = 'My task';
+document.getElementById('task-title').innerHTML = '<span style="color:red">Task List</span>';
+
+// document.querySelector()
+document.querySelector('#task-title'); // query selector by ID
+document.querySelector('.card-title'); // query selector by className
+document.querySelector('h5'); // query selector by HTML Tag
