@@ -46,6 +46,15 @@ DOM is document Object Model and javaScript can be used to read/write manipulate
     - [document.querySelectorAll](#documentqueryselectorall)
     - [Odd and Even](#odd-and-even)
   - [Traversing The DOM](#traversing-the-dom)
+    - [setup](#setup-1)
+    - [Get child nodes](#get-child-nodes)
+    - [Get children element nodes](#get-children-element-nodes)
+    - [First child](#first-child)
+    - [Last child](#last-child)
+    - [Count child elements](#count-child-elements)
+    - [Get parent node](#get-parent-node)
+    - [Get next sibling](#get-next-sibling)
+    - [Get prev sibling](#get-prev-sibling)
   - [Creating Elements](#creating-elements)
   - [Removing & Replacing Elements](#removing--replacing-elements)
   - [Event Listeners & Event Object](#event-listeners--event-object)
@@ -354,6 +363,82 @@ liEven.forEach(function () {
 
 ## Traversing The DOM
 
+| Number    | Description           |
+| --------- | --------------------- |
+| Header    | Title                 |
+| number 1  | Element               |
+| number 2  | Attribute(deprecated) |
+| number 3  | Text nodes            |
+| number 8  | comment               |
+| number 9  | Document itself       |
+| number 10 | Doctype               |
+
+### setup
+
+```js
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem;
+val = list;
+```
+### Get child nodes
+
+```js
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[3].nodeType;
+```
+### Get children element nodes
+
+```js
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = 'Hello';
+// Children of children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children[0];
+```
+### First child
+```js
+val = list.firstChild;
+val = list.firstElementChild;
+```
+### Last child
+
+```js
+val = list.lastChild;
+val = list.lastElementChild;
+```
+### Count child elements
+
+```js
+val = list.childElementCount;
+```
+### Get parent node
+
+```js
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+```
+### Get next sibling
+
+```js
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+```
+### Get prev sibling
+
+```js
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+console.log(val);
+
+```
 ## Creating Elements
 
 ## Removing & Replacing Elements
