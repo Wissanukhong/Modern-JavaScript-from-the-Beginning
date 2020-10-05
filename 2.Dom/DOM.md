@@ -717,6 +717,8 @@ function runEvent(e) {
 
 ## Local & Session storage
 
+![localStorage](img/localStorage.png)
+
 1. If we use `localstorage.setItem('name', 'John');` this one can storage in the web browser.
 2. But if we use `sessionStorage.setItem('name', 'Brown');` this one can not storage in the web browser.
 
