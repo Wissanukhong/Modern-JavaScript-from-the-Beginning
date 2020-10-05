@@ -67,6 +67,18 @@ DOM is document Object Model and javaScript can be used to read/write manipulate
     - [Append link into li](#append-link-into-li)
     - [Append li as child to ul](#append-li-as-child-to-ul)
   - [Removing & Replacing Elements](#removing--replacing-elements)
+    - [Create Element](#create-element-1)
+    - [Add id](#add-id-1)
+    - [New text node](#new-text-node)
+    - [Get the old heading](#get-the-old-heading)
+    - [Parent](#parent)
+    - [Replace](#replace)
+    - [REMOVE ELEMENT](#remove-element)
+    - [Remove list item](#remove-list-item)
+    - [Remove child element](#remove-child-element)
+    - [CLASSES & ATTR](#classes--attr)
+    - [Classes](#classes)
+    - [Attributes](#attributes)
   - [Event Listeners & Event Object](#event-listeners--event-object)
   - [Mouse Event](#mouse-event)
   - [Keyboard Event](#keyboard-event)
@@ -521,6 +533,90 @@ document.querySelector("ul.collection").appendChild(li);
 ```
 
 ## Removing & Replacing Elements
+
+### Create Element
+
+```js
+const newHeading = document.createElement("h2");
+```
+
+### Add id
+
+```js
+newHeading.id = "task-title";
+```
+
+### New text node
+
+```js
+newHeading.appendChild(document.createTextNode("Task List"));
+```
+
+### Get the old heading
+
+```js
+const oldHeading = document.getElementById("task-title");
+```
+
+### Parent
+
+```js
+const cardAction = document.querySelector(".card-action");
+```
+
+### Replace
+
+```js
+cardAction.replaceChild(newHeading, oldHeading);
+```
+
+### REMOVE ELEMENT
+
+```js
+const lis = document.querySelectorAll("li");
+const list = document.querySelector("ul");
+```
+
+### Remove list item
+
+```js
+lis[0].remove();
+```
+
+### Remove child element
+
+```js
+list.removeChild(lis[3]);
+```
+
+### CLASSES & ATTR
+
+```js
+const firstLi = document.querySelector("li:first-child");
+const link = firstLi.children[0];
+```
+
+### Classes
+
+```js
+val = link.className;
+val = link.classList;
+val = link.classList[0];
+link.classList.add("test");
+link.classList.remove("test");
+val = link;
+```
+
+### Attributes
+
+```js
+val = link.getAttribute("href");
+val = link.setAttribute("href", "http://google.com");
+link.setAttribute("title", "Google");
+val = link.hasAttribute("title");
+link.removeAttribute("title");
+val = link;
+```
 
 ## Event Listeners & Event Object
 
