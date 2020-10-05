@@ -21,7 +21,7 @@ lis.forEach(function(li, index){
     li.textContent = `${index}: Hello`;
 });
 
-document.querySelectorAll
+// document.querySelectorAll
 const items = document.querySelectorAll('ul.collection li.collection-item');
 console.log(items)
 

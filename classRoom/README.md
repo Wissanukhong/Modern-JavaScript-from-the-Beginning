@@ -108,7 +108,7 @@ let user = {
 user.go(); // output: John
 ```
 
-**Explan**
+**Expaind**
 1. Create object user 
 2. Assing the key is name
 3. Assign the value : 'John'

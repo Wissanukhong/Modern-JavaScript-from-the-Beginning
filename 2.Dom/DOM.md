@@ -1,6 +1,6 @@
 # DOM
 
-DOM is document Object Model and javaScript can be used to read/write manipulate to the DOM. This picture can be explained DOM very easy.
+DOM is document Object Model and javaScript can be used to read/write manipulate to the DOM. This picture can be explianed DOM very easy.
 
 ![DOM](../img/DOM%20model.png)
 
