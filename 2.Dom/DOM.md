@@ -83,6 +83,13 @@ DOM is document Object Model and javaScript can be used to read/write manipulate
   - [Mouse Event](#mouse-event)
   - [Keyboard Event](#keyboard-event)
   - [Local & Session storage](#local--session-storage)
+    - [set local storage item](#set-local-storage-item)
+    - [set session storage item](#set-session-storage-item)
+    - [remove from storage](#remove-from-storage)
+    - [get from storage](#get-from-storage)
+    - [clear local storage](#clear-local-storage)
+    - [Add task to local storgae](#add-task-to-local-storgae)
+  - [delete task](#delete-task)
 
 ## Examining The Document object
 
@@ -710,6 +717,79 @@ function runEvent(e) {
 
 ## Local & Session storage
 
+1. If we use `localstorage.setItem('name', 'John');` this one can storage in the web browser.
+2. But if we use `sessionStorage.setItem('name', 'Brown');` this one can not storage in the web browser.
+
+### set local storage item
+
+```js
+localStorage.setItem("name", "John");
+localStorage.setItem("age", "30");
 ```
 
+### set session storage item
+
+```js
+sessionStorage.setItem("name", "Beth");
+```
+
+### remove from storage
+
+```js
+localStorage.removeItem("name");
+```
+
+### get from storage
+
+```js
+const name = localStorage.getItem("name");
+const age = localStorage.getItem("age");
+```
+
+### clear local storage
+
+```js
+localStorage.clear();
+```
+
+### Add task to local storgae
+
+```js
+document.querySelector("form").addEventListener("submit", function (e) {
+  const task = document.getElementById("task").value;
+
+  let tasks;
+
+  if (localStorage.getItem("tasks") === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+
+  tasks.push(task);
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+
+  alert("Task saved");
+
+  e.preventDefault();
+});
+
+const tasks = JSON.parse(localStorage.getItem("tasks"));
+
+tasks.forEach(function (task) {
+  console.log(task);
+});
+```
+
+## delete task
+
+```js
+document.body.addEventListener("click", deleteItem);
+
+function deleteItem(e) {
+  if (e.target.parentElement.classList.contains("delete-item")) {
+    e.target.parentElement.parentElement.remove();
+  }
+}
 ```
