@@ -56,6 +56,16 @@ DOM is document Object Model and javaScript can be used to read/write manipulate
     - [Get next sibling](#get-next-sibling)
     - [Get prev sibling](#get-prev-sibling)
   - [Creating Elements](#creating-elements)
+    - [Create element](#create-element)
+    - [Add class](#add-class)
+    - [Add id](#add-id)
+    - [Add attribute](#add-attribute)
+    - [Create text node and append](#create-text-node-and-append)
+    - [Create new link element](#create-new-link-element)
+    - [Add classes](#add-classes)
+    - [Add icon html](#add-icon-html)
+    - [Append link into li](#append-link-into-li)
+    - [Append li as child to ul](#append-li-as-child-to-ul)
   - [Removing & Replacing Elements](#removing--replacing-elements)
   - [Event Listeners & Event Object](#event-listeners--event-object)
   - [Mouse Event](#mouse-event)
@@ -378,12 +388,13 @@ liEven.forEach(function () {
 ```js
 let val;
 
-const list = document.querySelector('ul.collection');
-const listItem = document.querySelector('li.collection-item:first-child');
+const list = document.querySelector("ul.collection");
+const listItem = document.querySelector("li.collection-item:first-child");
 
 val = listItem;
 val = list;
 ```
+
 ### Get child nodes
 
 ```js
@@ -392,32 +403,38 @@ val = list.childNodes[0];
 val = list.childNodes[0].nodeName;
 val = list.childNodes[3].nodeType;
 ```
+
 ### Get children element nodes
 
 ```js
 val = list.children;
 val = list.children[1];
-list.children[1].textContent = 'Hello';
+list.children[1].textContent = "Hello";
 // Children of children
-list.children[3].children[0].id = 'test-link';
+list.children[3].children[0].id = "test-link";
 val = list.children[3].children[0];
 ```
+
 ### First child
+
 ```js
 val = list.firstChild;
 val = list.firstElementChild;
 ```
+
 ### Last child
 
 ```js
 val = list.lastChild;
 val = list.lastElementChild;
 ```
+
 ### Count child elements
 
 ```js
 val = list.childElementCount;
 ```
+
 ### Get parent node
 
 ```js
@@ -425,21 +442,83 @@ val = listItem.parentNode;
 val = listItem.parentElement;
 val = listItem.parentElement.parentElement;
 ```
+
 ### Get next sibling
 
 ```js
 val = listItem.nextSibling;
 val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
 ```
+
 ### Get prev sibling
 
 ```js
 val = listItem.previousSibling;
 val = listItem.previousElementSibling;
 console.log(val);
-
 ```
+
 ## Creating Elements
+
+### Create element
+
+```js
+const li = document.createElement("li");
+```
+
+### Add class
+
+```js
+li.className = "collection-item";
+```
+
+### Add id
+
+```js
+li.id = "new-item";
+```
+
+### Add attribute
+
+```js
+li.setAttribute("title", "New Item");
+```
+
+### Create text node and append
+
+```js
+li.appendChild(document.createTextNode("Hello World"));
+```
+
+### Create new link element
+
+```js
+const link = document.createElement("a");
+```
+
+### Add classes
+
+```js
+link.className = "delete-item secondary-content";
+```
+
+### Add icon html
+
+```js
+link.innerHTML = '<i class="fa fa-remove"></i>';
+```
+
+### Append link into li
+
+```js
+li.appendChild(link);
+```
+
+### Append li as child to ul
+
+```js
+document.querySelector("ul.collection").appendChild(li);
+```
 
 ## Removing & Replacing Elements
 
