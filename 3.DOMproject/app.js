@@ -18,6 +18,11 @@ function loadEventListeners() {
     // addTask เป็น callback function ที่เรียก Listener มาใช้งาน
     form.addEventListener('submit', addTask)
 
+    // Remove task event
+    // taskList มาจาก ตัวแปรที่เราสร้างเพื่อที่จะ querySelector('.collection')
+    // ให้ event ทำงานเมื่อ click และเรียก callback function remveTask ที่เราสร้าง function
+    taskList.addEventListener('click', removeTask);
+
 }
 
 // Add Task
@@ -54,9 +59,20 @@ function addTask(e) {
     taskList.appendChild(li);
 
     // Clear input
+    // หลังจากที่เรากรอกข้อมูลลงไป เราต้องการให้ระบบ clear ค่าเดิมออกเพื่อที่จะกรอกข้อมูลได้ 
     taskInput.value = '';
 
 
     // เป็นการป้องกันไม่ให้ โปรแกรม reflesh หน้าจอ หลังจากที่กด submit 
     e.preventDefault();
 }
+
+// Remove task
+function removeTask(e) {
+    if(e.target.parentElement.classList.contains('delete-item')) {
+        if(confirm('Are You Sure?')) {
+            e.target.parentElement.parentElement.remove();
+        }
+    }
+    
+} 
