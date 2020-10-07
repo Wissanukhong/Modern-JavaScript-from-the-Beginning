@@ -23,6 +23,12 @@ function loadEventListeners() {
     // ให้ event ทำงานเมื่อ click และเรียก callback function remveTask ที่เราสร้าง function
     taskList.addEventListener('click', removeTask);
 
+    // Clear task
+    clearBtn.addEventListener('click', clearTasks);
+
+    // Fileter task event
+    filter.addEventListener('keyup', filterTasks);
+
 }
 
 // Add Task
@@ -69,10 +75,37 @@ function addTask(e) {
 
 // Remove task
 function removeTask(e) {
-    if(e.target.parentElement.classList.contains('delete-item')) {
-        if(confirm('Are You Sure?')) {
+    if (e.target.parentElement.classList.contains('delete-item')) {
+        if (confirm('Are You Sure?')) {
             e.target.parentElement.parentElement.remove();
         }
     }
-    
-} 
+
+}
+
+// Clear tasks
+function clearTasks(e) {
+    // First way
+    // taskList.innerHTML = '';
+
+    // Second way is faster than first way
+    while (taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
+}
+
+// Filter tasks
+function filterTasks(e) {
+    // สร้างตัวแปร text ขึ้นมาเพื่อแปลงค่าให้เป็นตัวเล็กก่อน
+    const text = e.target.value.toLowerCase();
+
+    document.querySelectorAll('.collection-item').forEach(function (task) {
+        const item = task.firstChild.textContent;
+        if (item.toLowerCase().indexOf(text) != -1) {
+            task.style.display = 'block';
+        } else {
+            task.style.display = 'none';
+        }
+    });
+
+}
