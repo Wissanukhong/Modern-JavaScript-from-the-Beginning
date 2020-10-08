@@ -108,4 +108,10 @@ function filterTasks(e) {
         }
     });
 
+    // เรียก list ทั้งหมดด้วยคำสั่ง document.querySelectorAll('.collection-item')
+    // จากนั้น ใช้ method forEach เพื่อ loop array ออกมา
+    // จากนั้นเขียน function เพื่อให้ return ค่าที่มาจากการ filter
+    // ถ้าค่า Match ให้แสดงค่าออกมา
+    // แต่ค่าไม่ Match ไม่ต้องแสดงอะไร ออกมา
+
 }

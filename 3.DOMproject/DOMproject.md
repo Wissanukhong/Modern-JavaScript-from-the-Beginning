@@ -7,6 +7,9 @@
 - innerHTML เป็นการแทรก HTML Tag ลงไปในตำแหน่งที่ต้องการ 
 - appendChild ใช้สำหรับแทรก element ใดๆ ลงใน element ที่กำหนด โดย element ที่แทรกจะเป็น โหนดลูก (child node) ของ element ที่แทรก 
 - contains() เป็นการตรวจสอบว่าภายใน Hashtable ในมี  key, value นั้นอยู่่หรือเปล่า
+- forEach ใช้เพื่อการ วนลูป รอบอาร์เรย์ โดยหลักการแล้วเราใช้เพื่อเข้าถึงแต่ละ Element ภายใน Array
+- != -1 ความหมายคือ ถ้าไม่เท่ากับ
+- .querySelectorAll จะ return node list ออกมา
 
 ## e.preventDefault 
 
