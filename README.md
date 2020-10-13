@@ -223,7 +223,7 @@ console.log(val.toFixed()); // Only work for number
 
 > **Note 📑**
 >
-> > `.toFixed()` is only work for number
+> > `.toFixed()` is only work for number  
 > > `.length()` is only work for string
 
 ### Math (Number)
