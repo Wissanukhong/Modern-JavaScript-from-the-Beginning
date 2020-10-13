@@ -5,7 +5,7 @@
 
 **Pages**
 
-- [Page 1 : Fundamental](https://github.com/Wissanukhong/Modern-JavaScript-from-the-Biginning)
+- [Page 1 : Fundamental](https://github.com/Wissanukhong/Modern-JavaScript-from-the-Biginning/blob/master/1.Fundamentals/fundamental.md)
 - [Page 2 : DOM](https://github.com/Wissanukhong/Modern-JavaScript-from-the-Biginning/blob/master/2.Dom/DOM.md)
 - [Page 3 : DOM project](https://github.com/Wissanukhong/Modern-JavaScript-from-the-Biginning/blob/master/3.DOMproject/DOMproject.md)
 
