@@ -47,5 +47,34 @@ const people = [
 ];
 
 for (let i = 0; i < people.length; i++) {
-    console.log(people[i].name + ' '+ people[i].age);
+    console.log(people[i].name + ' ' + people[i].age);
 }
+
+const films = {
+    films1: 'Titanic',
+    films2: 'Jack',
+    films3: 'Boat',
+    films4: 'Pradang',
+    films5: 'Tennet'
+}
+
+console.log(films);
+
+// สร้าง Object มา 1 object ที่จะต้องเก็บค่า 
+// ชื่อ นามสกุล
+// อายุ
+// จากนั้นเขียน function เพื่อคำนวณปีเกิดของแต่ละคน ว่าเกิดปีอะไร 
+const family = [
+    { name: 'Wissanu', lastName: 'Khongjandee', age: 27 },
+    { name: 'Nippaprn', lastName: 'Khongjandee', age: 28 },
+    { name: 'Warinthon', lastName: 'Khongjandee', age: 7 }
+]
+
+function birthYear() {
+    for (let i = 0; i < family.length; i++) {
+        const result = 2020 - family[i].age
+        console.log(`In the family my name is ${family[i].name} I was born in ${result} `);
+    }
+}
+
+birthYear();
