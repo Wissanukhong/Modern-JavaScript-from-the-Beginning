@@ -1,4 +1,75 @@
-# How to name in variables💡
+tabale of contents
+- [How to name in variables](#how-to-name-in-variables)
+- [Variable](#variable)
+- [Data types](#data-types)
+  - [Primitive types](#primitive-types)
+  - [Reference types - object](#reference-types---object)
+  - [Type conversion](#type-conversion)
+    - [number to string](#number-to-string)
+    - [Boolean to string](#boolean-to-string)
+    - [Date to string](#date-to-string)
+    - [Array to String](#array-to-string)
+    - [toString](#tostring)
+    - [String to number](#string-to-number)
+- [Math (Number)](#math-number)
+- [String](#string)
+  - [concat](#concat)
+  - [concantination](#concantination)
+  - [Append](#append)
+  - [Length](#length)
+  - [function concat](#function-concat)
+  - [Change case](#change-case)
+  - [indexOf()](#indexof)
+  - [charArt()](#charart)
+  - [get last char](#get-last-char)
+  - [substring](#substring)
+  - [splite](#splite)
+  - [each char](#each-char)
+  - [each comma](#each-comma)
+  - [includes()](#includes)
+- [Template literals](#template-literals)
+- [Array](#array)
+  - [create new Array](#create-new-array)
+  - [Change case with loop array](#change-case-with-loop-array)
+  - [Array length](#array-length)
+  - [check something in Array it will return 'ture' and 'False'](#check-something-in-array-it-will-return-ture-and-false)
+  - [Get single value](#get-single-value)
+  - [Insert value into array (It is replace on the old value)](#insert-value-into-array-it-is-replace-on-the-old-value)
+  - [Find index](#find-index)
+  - [Add on to front](#add-on-to-front)
+  - [Add on to end](#add-on-to-end)
+  - [Take off from the end](#take-off-from-the-end)
+  - [Take off from the front](#take-off-from-the-front)
+  - [Splice การเลือกค่าจาก array มาแสดง](#splice-การเลือกค่าจาก-array-มาแสดง)
+  - [Revers](#revers)
+  - [Revers workshop](#revers-workshop)
+  - [sorting string](#sorting-string)
+  - [sorting number](#sorting-number)
+  - [Revers sorting number](#revers-sorting-number)
+- [Object literals](#object-literals)
+  - [object](#object)
+  - [get specific value](#get-specific-value)
+  - [new object](#new-object)
+- [Date and Times](#date-and-times)
+- [Interation](#interation)
+  - [If else statement](#if-else-statement)
+  - [Equal to](#equal-to)
+  - [Not Equal to](#not-equal-to)
+  - [Equal to value & Type](#equal-to-value--type)
+  - [Not equal to value & Type](#not-equal-to-value--type)
+  - [Test if undefined](#test-if-undefined)
+  - [Greater or less than](#greater-or-less-than)
+  - [if else workshop](#if-else-workshop)
+  - [Logical operator](#logical-operator)
+  - [Ternary Operator](#ternary-operator)
+  - [Switches case](#switches-case)
+- [Function](#function)
+- [General loop](#general-loop)
+- [Window Object](#window-object)
+- [Global and Block scope variables](#global-and-block-scope-variables)
+
+
+# How to name in variables
 
 - `var firstName = 'John';` // Camel case
 
@@ -6,13 +77,13 @@
 
 - `var FirstName = 'Tom';` // Pascal case
 
-# Variable💡
+# Variable
 
 1. var is global variable
 2. let is Block variable
 3. const is constant variable(We can chenge the value in const with object)
 
-# Data types 📄
+# Data types
 
 Data types basically specify what kind of data can be stored and manipulated within a program. There are six basic data types in JavaScript which can be divided into three main categories: primitive (or primary), composite (or reference), and special data types. String, Number, and Boolean are primitive data types.
 
@@ -145,7 +216,7 @@ console.log(val.toFixed()); // Only work for number
 | min()    | Used to find the smaller value between the given numbers   |
 
 you can read this for method
-[📌 JavaScript :: Math Class](http://code.function.in.th/javascript/math)****
+[📌 JavaScript :: Math Class](http://code.function.in.th/javascript/math)\*\*\*\*
 
 ```js
 let val;
