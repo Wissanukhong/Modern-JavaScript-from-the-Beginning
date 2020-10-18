@@ -1,21 +1,22 @@
 tabale of contents
+
 - [How to name in variables](#how-to-name-in-variables)
 - [Variable](#variable)
 - [Data types](#data-types)
   - [Primitive types](#primitive-types)
   - [Reference types - object](#reference-types---object)
-  - [Type conversion](#type-conversion)
-    - [number to string](#number-to-string)
-    - [Boolean to string](#boolean-to-string)
-    - [Date to string](#date-to-string)
-    - [Array to String](#array-to-string)
-    - [toString](#tostring)
-    - [String to number](#string-to-number)
+- [Type conversion](#type-conversion)
+  - [number to string](#number-to-string)
+  - [Boolean to string](#boolean-to-string)
+  - [Date to string](#date-to-string)
+  - [Array to String](#array-to-string)
+  - [toString](#tostring)
+  - [String to number](#string-to-number)
 - [Math (Number)](#math-number)
 - [String](#string)
   - [concat](#concat)
   - [concantination](#concantination)
-  - [Append](#append)
+  - [Append (เพิ่มค่าเข้าไป)](#append-เพิ่มค่าเข้าไป)
   - [Length](#length)
   - [function concat](#function-concat)
   - [Change case](#change-case)
@@ -68,7 +69,6 @@ tabale of contents
 - [Window Object](#window-object)
 - [Global and Block scope variables](#global-and-block-scope-variables)
 
-
 # How to name in variables
 
 - `var firstName = 'John';` // Camel case
@@ -108,11 +108,11 @@ const person = {
 console.log(typeof person);
 ```
 
-## Type conversion
+# Type conversion
 
 Type conversion is change the defalt type of thier variable to something.
 
-### number to string
+## number to string
 
 ```js
 val = String(555);
@@ -121,7 +121,7 @@ console.log(typeof val);
 console.log(val.length);
 ```
 
-### Boolean to string
+## Boolean to string
 
 ```js
 val = String(true);
@@ -129,7 +129,7 @@ console.log(val);
 console.log(typeof val);
 ```
 
-### Date to string
+## Date to string
 
 ```js
 val = String(new Date());
@@ -137,7 +137,7 @@ console.log(val);
 console.log(typeof val);
 ```
 
-### Array to String
+## Array to String
 
 ```js
 val = String([1, 2, 3, 4]);
@@ -145,7 +145,7 @@ console.log(val);
 console.log(typeof val);
 ```
 
-### toString
+## toString
 
 ```js
 val = (5).toString();
@@ -157,7 +157,7 @@ console.log(val);
 console.log(typeof val);
 ```
 
-### String to number
+## String to number
 
 ```js
 val = Number("5");
@@ -208,7 +208,7 @@ console.log(val.toFixed()); // Only work for number
 | Syntax   | Description                                                |
 | -------- | ---------------------------------------------------------- |
 | Header   | Title                                                      |
-| random() | random number between 0-9                                  |
+| random() | random number between 0.1-0.9                              |
 | round()  | Used to round the decimal of a specified number            |
 | ceil()   | Used to round decimals to integers. And to have more value |
 | floor()  | Used to round decimals to integers. And to have less value |
@@ -269,7 +269,7 @@ output = firstName + " " + lastname;
 console.log(output);
 ```
 
-## Append
+## Append (เพิ่มค่าเข้าไป)
 
 ```js
 output = "John ";
@@ -408,12 +408,15 @@ document.body.innerHTML = es6;
 ## create new Array
 
 ```js
+// way 1
 const number = [43, 56, 33, 23, 44, 36];
 console.log(number);
 
+// way 2
 const person = new Array("John due", "Brown smith");
 console.log(person);
 
+// way 3
 const fruit = ["Banana", "Orange", "Pear", "apple"];
 console.log(fruit);
 
