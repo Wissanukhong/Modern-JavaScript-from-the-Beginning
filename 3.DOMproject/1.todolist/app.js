@@ -2,7 +2,7 @@
 const form = document.querySelector('#task-form');
 const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
-const filter = document.querySelector('#fileter');
+const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 
 // Load all event listeners
@@ -12,6 +12,9 @@ loadEventListeners();
 // Load all event listeners
 // เราจะเขียนโปรแกรมข้างใน function นี้มีอะไรบ้าง
 function loadEventListeners() {
+    // DOM laod event
+    document.addEventListener('DOMContentLoaded', getTasks);
+
     // Add task event
     // form มาจาก form html ที่มี type input เป็น submit
     // addTask เป็น callback function ที่เรียก Listener มาใช้งาน
@@ -26,7 +29,44 @@ function loadEventListeners() {
     clearBtn.addEventListener('click', clearTasks);
 
     // Fileter task event
-    filter.addEventListener('keyup', filterTasks);
+    filter.addEventListener('keypress', filterTasks);
+}
+
+// Get Tasks form Local storage
+function getTasks() {
+    let tasks;
+    if (localStorage.getItem('tasks') === null) {
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    tasks.forEach(function (task) {
+        // Create element
+        const li = document.createElement('li');
+
+        // Add class to const li
+        li.className = 'collection-item';
+
+        // Create text node and append to li
+        li.appendChild(document.createTextNode(task));
+
+        // Create new link element
+        const link = document.createElement('a');
+
+        // Add class to const like
+        link.className = 'delete-item secondary-content';
+
+        // Add icon to html
+        link.innerHTML = '<i class="fa fa-remove"></i>';
+
+        // Append the link to li
+        li.appendChild(link);
+
+        // Append li to ul
+        // เรียก ตัวแปรที่เราสร้างไว้มาใช้งาน โดยการแทรก(appendChild) li ที่เราสร้างไว้ลงไป
+        taskList.appendChild(li);
+    });
 }
 
 // Add Task
@@ -81,7 +121,7 @@ function storeTaskInLocalStorage(task) {
     // ถ้าเป็นค่าว่าง ให้ส่งค่าเป็น Array เปล่าออกไป
     // ถ้าไม่เป็นค่าว่าง ให้เรียกใช้ method push ส่งค่าเข้าไปใน array ของ local storage 
     // จากนั้นเราจะต้องส่งค่าไปที่ Local DB ด้วย JSON.stringify() เพื่อใหสามารถอ่านค่าได้
-    if(localStorage.getItem('tasks') === null) {
+    if (localStorage.getItem('tasks') === null) {
         tasks = [];
     } else {
         tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -98,9 +138,30 @@ function removeTask(e) {
     if (e.target.parentElement.classList.contains('delete-item')) {
         if (confirm('Are You Sure?')) {
             e.target.parentElement.parentElement.remove();
+
+            // Remove from local storage
+            removeTaskFromLocalStorage(e.target.parentElement.parentElement);
         }
     }
 }
+
+// Remove from local storage
+function removeTaskFromLocalStorage(taskItem) {
+    let tasks;
+
+    if (localStorage.getItem('tasks') === null) {
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    tasks.forEach(function (task, index) {
+        if (taskItem.textContent === task) {
+            tasks.splice(index, 1);
+        }
+    });
+}
+
 
 // Clear tasks
 function clearTasks(e) {
@@ -111,6 +172,14 @@ function clearTasks(e) {
     while (taskList.firstChild) {
         taskList.removeChild(taskList.firstChild);
     }
+
+    // clear task from local storage
+    cleaerTaskFromLocalSorage()
+}
+
+// Clear Task form local storage
+function cleaerTaskFromLocalSorage() {
+    localStorage.clear()
 }
 
 // Filter tasks
