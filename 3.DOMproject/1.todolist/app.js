@@ -10,13 +10,12 @@ const taskInput = document.querySelector('#task');
 loadEventListeners();
 
 // Load all event listeners
-// เราจะเขียนโปรแกรมข้างใน function นี้มีอะไรบ้าง 
+// เราจะเขียนโปรแกรมข้างใน function นี้มีอะไรบ้าง
 function loadEventListeners() {
-
     // Add task event
-    // form มาจาก form html ที่มี type input เป็น submit 
+    // form มาจาก form html ที่มี type input เป็น submit
     // addTask เป็น callback function ที่เรียก Listener มาใช้งาน
-    form.addEventListener('submit', addTask)
+    form.addEventListener('submit', addTask);
 
     // Remove task event
     // taskList มาจาก ตัวแปรที่เราสร้างเพื่อที่จะ querySelector('.collection')
@@ -28,7 +27,6 @@ function loadEventListeners() {
 
     // Fileter task event
     filter.addEventListener('keyup', filterTasks);
-
 }
 
 // Add Task
@@ -41,36 +39,58 @@ function addTask(e) {
     // Create element
     const li = document.createElement('li');
 
-    // Add class to const li 
+    // Add class to const li
     li.className = 'collection-item';
 
     // Create text node and append to li
-    // taskInput.value เป็นการเรียกใช้ค่าจากตัวแปรที่สร้างไว้ ภายในนอก Function 
+    // taskInput.value เป็นการเรียกใช้ค่าจากตัวแปรที่สร้างไว้ ภายในนอก Function
     li.appendChild(document.createTextNode(taskInput.value));
 
     // Create new link element
     const link = document.createElement('a');
 
-    // Add class to const like 
+    // Add class to const like
     link.className = 'delete-item secondary-content';
 
     // Add icon to html
     link.innerHTML = '<i class="fa fa-remove"></i>';
 
-    // Append the link to li 
+    // Append the link to li
     li.appendChild(link);
 
     // Append li to ul
     // เรียก ตัวแปรที่เราสร้างไว้มาใช้งาน โดยการแทรก(appendChild) li ที่เราสร้างไว้ลงไป
     taskList.appendChild(li);
 
+    // store in local storage
+    storeTaskInLocalStorage(taskInput.value);
+
     // Clear input
-    // หลังจากที่เรากรอกข้อมูลลงไป เราต้องการให้ระบบ clear ค่าเดิมออกเพื่อที่จะกรอกข้อมูลได้ 
+    // หลังจากที่เรากรอกข้อมูลลงไป เราต้องการให้ระบบ clear ค่าเดิมออกเพื่อที่จะกรอกข้อมูลได้
     taskInput.value = '';
 
-
-    // เป็นการป้องกันไม่ให้ โปรแกรม reflesh หน้าจอ หลังจากที่กด submit 
+    // เป็นการป้องกันไม่ให้ โปรแกรม reflesh หน้าจอ หลังจากที่กด submit
     e.preventDefault();
+}
+
+// Store Task
+function storeTaskInLocalStorage(task) {
+    let tasks;
+    // สร้างตัวแปร tasks ขึ้นมาเพื่อทำการเช็คค่าว่า ค่าที่ส่งเข้ามาเป็นค่าว่างหรือว่ามีค่าหรือไม่
+    // สร้าง if else statment ขึ้นมาเพื่อตรวจเช็คค่าว่า เป็นค่าว่างหรือไม่ 
+    // ถ้าเป็นค่าว่าง ให้ส่งค่าเป็น Array เปล่าออกไป
+    // ถ้าไม่เป็นค่าว่าง ให้เรียกใช้ method push ส่งค่าเข้าไปใน array ของ local storage 
+    // จากนั้นเราจะต้องส่งค่าไปที่ Local DB ด้วย JSON.stringify() เพื่อใหสามารถอ่านค่าได้
+    if(localStorage.getItem('tasks') === null) {
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    // ส่งค่าไป parameter เพื่อเก็บค่าที่ได้เข้า Local DB
+    tasks.push(task);
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 // Remove task
@@ -80,7 +100,6 @@ function removeTask(e) {
             e.target.parentElement.parentElement.remove();
         }
     }
-
 }
 
 // Clear tasks
@@ -113,5 +132,4 @@ function filterTasks(e) {
     // จากนั้นเขียน function เพื่อให้ return ค่าที่มาจากการ filter
     // ถ้าค่า Match ให้แสดงค่าออกมา
     // แต่ค่าไม่ Match ไม่ต้องแสดงอะไร ออกมา
-
 }
