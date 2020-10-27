@@ -1,18 +1,27 @@
 // Listener form
-document.getElementById('loan-form').addEventListener('submit', calculateResults);
+document.getElementById('loan-form').addEventListener('submit', function (e) {
+
+    // Hide results
+    document.getElementById('results').style.display = 'none';
+
+    // Show loader
+    document.getElementById('loading').style.display = 'block';
+
+    // setTimeOut
+    setTimeout(calculateResults, 2000);
+
+    e.preventDefault()
+});
 
 // calculate Results function
-function calculateResults(e) {
-
-    console.log('calculate .......')
-
+function calculateResults() {
     // UI variable and getElementById from html
     const amount = document.getElementById('amount');
     const interest = document.getElementById('interest');
     const years = document.getElementById('years');
-    const monthlyPayment = document.getElementById('monthly-payment'); 
-    const totalPayment = document.getElementById('total-payment'); 
-    const totalInterest = document.getElementById('total-interest'); 
+    const monthlyPayment = document.getElementById('monthly-payment');
+    const totalPayment = document.getElementById('total-payment');
+    const totalInterest = document.getElementById('total-interest');
 
     const principle = parseFloat(amount.value);
     const calculatedInterest = parseFloat(interest.value) / 100 / 12;
@@ -20,28 +29,38 @@ function calculateResults(e) {
 
     // compute monthly payment
     const x = Math.pow(1 + calculatedInterest, calculatedPayments);
-    const monthly = (principle*x*calculatedInterest)/(x-1);
+    const monthly = (principle * x * calculatedInterest) / (x - 1);
 
-    if(isFinite(monthly)) {
+    if (isFinite(monthly)) {
         monthlyPayment.value = monthly.toFixed(2);
         totalPayment.value = (monthly * calculatedPayments).toFixed(2);
-        totalInterest.value = ((monthly * calculatedPayments)-principle).toFixed(2);
+        totalInterest.value = ((monthly * calculatedPayments) - principle).toFixed(2);
+
+        // show result after hide
+        document.getElementById('results').style.display = 'block';
+
+        // hide loader
+        document.getElementById('loading').style.display = 'none';
     } else {
         showError('Please check your number');
     }
-
-    e.preventDefault();
 }
 
 // Show Error
 function showError(error) {
+    // Hide results
+    document.getElementById('results').style.display = 'none';
+
+    // Hide loader
+    document.getElementById('loading').style.display = 'none';
+
     // create a div
     const errorDiv = document.createElement('div');
 
     // get elements
     const card = document.querySelector('.card');
     const heading = document.querySelector('.heading');
-    
+
     // add class to errordiv
     errorDiv.className = 'alert alert-danger';
 
