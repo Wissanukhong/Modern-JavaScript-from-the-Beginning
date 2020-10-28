@@ -36,10 +36,10 @@ function calculateResults() {
         totalPayment.value = (monthly * calculatedPayments).toFixed(2);
         totalInterest.value = ((monthly * calculatedPayments) - principle).toFixed(2);
 
-        // show result after hide
+        // Show results
         document.getElementById('results').style.display = 'block';
 
-        // hide loader
+        // Hide loader
         document.getElementById('loading').style.display = 'none';
     } else {
         showError('Please check your number');
@@ -54,24 +54,24 @@ function showError(error) {
     // Hide loader
     document.getElementById('loading').style.display = 'none';
 
-    // create a div
+    // Create a div
     const errorDiv = document.createElement('div');
 
-    // get elements
+    // Get elements
     const card = document.querySelector('.card');
     const heading = document.querySelector('.heading');
 
-    // add class to errordiv
+    // Add class
     errorDiv.className = 'alert alert-danger';
 
-    // create text node and append to div
+    // Create text node and append to div
     errorDiv.appendChild(document.createTextNode(error));
 
-    // insert error above heading
+    // Insert error above heading
     card.insertBefore(errorDiv, heading);
 
     // Clear error after 3 seconds
-    setTimeout(clearError, 2000);
+    setTimeout(clearError, 3000);
 }
 
 // function clear Error

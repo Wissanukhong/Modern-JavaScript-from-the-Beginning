@@ -7,3 +7,4 @@
 - `Math.pow`
 - `isFinite`
 - `toFixed`
+- `setTimeout(callback function, time mini second);`
