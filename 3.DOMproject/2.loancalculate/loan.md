@@ -29,18 +29,12 @@ document.getElementById("loan-form").addEventListener("submit", function (e) {
   document.getElementById("loading").style.display = "block";
 
   // setTimeOut
-  // เป็นการเซตค่าในการเรียก function, เวลาที่ต้องการมีหน่วยเป็นวินาที 
+  // เป็นการเซตค่าในการเรียก function, เวลาที่ต้องการมีหน่วยเป็นวินาที
   setTimeout(calculateResults, 2000);
 
   e.preventDefault();
 });
 ```
-
-1. เราเข้าถึง Element ด้วยคำสั่ง getElementById('id')จากนั้นเพิ่มตัวจัดการ Evenet ด้วยคำสั่ง addEventListener('javaScript Event' function)
-2. จากนั้นเราก็เพิ่มตัวจัดการ event ด้วยคำสั่ง `.addEventListener("event type", function)`
-3. ภายใน function เราต้องการไม่ให้ระบบทำการ reflesh หน้าจอก่อนที่จะคำนวณ ดังนั้นเราจะต้องเรียกใช้คำสั่ง `e.preventDefault()`
-4. ในขั้นตอนแรก ก่อนที่โปรแกรมจะคำนวณ เราไม่ต้องการให้ Show results ออกมา ดังนั้นเราจึงเขียนคำส่ง `document.getElementById('html ID')` แล้วเพิ่ม `.style. css property = 'css valu'`
-5. จากนั้นเราบอกว่า หลังจากที่ show element loading ไปแล้วให้ show result ออกมา ด้วยคำสั่ง `settimeout(function ทีต้องการ, เวลาที่ต้องการ มีหน่วยเป็นวินาที)`
 
 ```js
 function calculateResults() {
