@@ -10,6 +10,8 @@ GAME FUNCTION:
 // game value
 let min = 0;
 let max = 10;
+let winningNum = 2;
+let guessesLeft = 3;
 
 // game UI
 const game = document.querySelector('#game');
@@ -25,5 +27,29 @@ maxNum.textContent = max;
 
 // Listen for guess
 guessBtn.addEventListener('click', function() {
-    console.log(guessInput.value);
+    let guess = parseInt(guessInput.value);
+
+    // Validate
+    if( isNaN(guess) || guess < min || guess > max) {
+        setMessage(`Please enter a number between ${min} and ${max}`, 'red');
+    }
+
+    // Check if won
+    if(guess === winningNum) {
+        // Disable input
+        guessInput.disabled = true;
+        // Change border coler
+        guessInput.style.borderColor = 'green';
+        // Set message
+        setMessage(`${winningNum} is correct, You Win`, 'green');
+
+    } else {
+
+    }
 });
+
+// set message
+function setMessage(msg, color) {
+    message.style.color = color;
+    message.textContent = msg;
+}
