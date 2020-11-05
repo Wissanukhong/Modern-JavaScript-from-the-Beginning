@@ -26,27 +26,71 @@ minNum.textContent = min;
 maxNum.textContent = max;
 
 // Listen for guess
-guessBtn.addEventListener('click', function() {
+guessBtn.addEventListener('click', function () {
     let guess = parseInt(guessInput.value);
 
     // Validate
-    if( isNaN(guess) || guess < min || guess > max) {
+    if (isNaN(guess) || guess < min || guess > max) {
         setMessage(`Please enter a number between ${min} and ${max}`, 'red');
     }
 
     // Check if won
-    if(guess === winningNum) {
-        // Disable input
-        guessInput.disabled = true;
-        // Change border coler
-        guessInput.style.borderColor = 'green';
-        // Set message
-        setMessage(`${winningNum} is correct, You Win`, 'green');
+    if (guess === winningNum) {
+        // game over - won 
+
+        gameOver(true, `${winningNum} is correct, You Win`);
+        // // Disable input
+        // guessInput.disabled = true;
+        // // Change border coler
+        // guessInput.style.borderColor = 'green';
+        // // Set message
+        // setMessage(`${winningNum} is correct, You Win`, 'green');
 
     } else {
+        // Wrong numbeer
+        guessesLeft -= 1;
 
+        if (guessesLeft === 0) {
+            // Game over - lost 
+
+            gameOver(false, `Game over , You lost. The correct number was ${winningNum}`);
+
+            // Disable input
+            // guessInput.disabled = true;
+            // // Change border coler
+            // guessInput.style.borderColor = 'red';
+            // // Set message
+            // setMessage(`Game over , You lost. The correct number was ${winningNum}`, 'red');
+        } else {
+            // Game continue - answer wrong
+
+            // Change border color
+            guessInput.style.borderColor = 'red';
+
+            // Clear inout
+            guessInput.value = ''
+
+            // Tell user the wrong number
+            setMessage(`${guess} is not correct , ${guessesLeft} guesses left`, 'red');
+        }
     }
 });
+
+// Game over
+function gameOver(won, msg) {
+    // Ternary operator
+    won === true ? color = 'green' : color = 'red';
+
+    // Disable input
+    guessInput.disabled = true;
+    // Change border coler
+    guessInput.style.borderColor = color;
+    // Set text color
+    message.style.color = color;
+    // Set message
+    setMessage(msg);
+}
+
 
 // set message
 function setMessage(msg, color) {
