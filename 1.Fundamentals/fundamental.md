@@ -1,6 +1,6 @@
 tabale of contents
 
-- [How to name in variables](#how-to-name-in-variables)
+- [การตั้งชื่อตัวแปร](#การตั้งชื่อตัวแปร)
 - [Variable](#variable)
 - [Data types](#data-types)
   - [Primitive types](#primitive-types)
@@ -69,19 +69,19 @@ tabale of contents
 - [Window Object](#window-object)
 - [Global and Block scope variables](#global-and-block-scope-variables)
 
-# How to name in variables
+# การตั้งชื่อตัวแปร
 
-- `var firstName = 'John';` // Camel case
+- `var firstName = 'John';` // Camel case (คำแรกขึ้นต้นด้วยตัวเล็กคำต่อไปอักษรตัวแลกขึ้นต้นด้วยตัวใหญ่)
 
-- `var first_name = 'Sara';` // Underscore case
+- `var first_name = 'Sara';` // Underscore case (เชื่อมคำด้วย _ )
 
-- `var FirstName = 'Tom';` // Pascal case
+- `var FirstName = 'Tom';` // Pascal case (ตัวแรก เป็นตัวใหญ่)
 
 # Variable
 
-1. var is global variable
-2. let is Block variable
-3. const is constant variable(We can chenge the value in const with object)
+1. var is global variable คือสามารถเข้าถึงตัวแปรได้ทั้งโปรแกรม
+2. let is Block variable คือตัวแปรที่เข้าถึงตัวแปรได้เฉพาะใน {Bllock scope} เท่านั้น
+3. const is constant variable คือตัวแปรที่จะต้องกำหนดค่าเริ่มต้นให้ และไม่สามารถเปลี่ยนแปลงค่าได้
 
 # Data types
 
@@ -207,7 +207,6 @@ console.log(val.toFixed()); // Only work for number
 
 | Syntax   | Description                                                |
 | -------- | ---------------------------------------------------------- |
-| Header   | Title                                                      |
 | random() | random number between 0.1-0.9                              |
 | round()  | Used to round the decimal of a specified number            |
 | ceil()   | Used to round decimals to integers. And to have more value |
@@ -236,7 +235,6 @@ console.log(val);
 
 | Syntax              | Description                                                                                                    |
 | ------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Header              | Title                                                                                                          |
 | length              | Check how many character that it contain                                                                       |
 | .toUpperCase()      | Change text to upper case                                                                                      |
 | .toLowerCase()      | Change text to Lower case                                                                                      |
