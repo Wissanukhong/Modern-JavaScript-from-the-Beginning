@@ -8,7 +8,6 @@ console.log(val);
 console.log(typeof val);
 console.log(val.length)
 
-
 // Boolean to string
 val = String(true);
 console.log(val);

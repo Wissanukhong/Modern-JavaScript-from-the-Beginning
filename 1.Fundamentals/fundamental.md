@@ -79,9 +79,9 @@ tabale of contents
 
 # Variable
 
-1. var is global variable คือสามารถเข้าถึงตัวแปรได้ทั้งโปรแกรม
-2. let is Block variable คือตัวแปรที่เข้าถึงตัวแปรได้เฉพาะใน {Bllock scope} เท่านั้น
-3. const is constant variable คือตัวแปรที่จะต้องกำหนดค่าเริ่มต้นให้ และไม่สามารถเปลี่ยนแปลงค่าได้
+1. var (global variable) คือสามารถเข้าถึงตัวแปรได้ทั้งโปรแกรม
+2. let (Block variable) คือตัวแปรที่เข้าถึงตัวแปรได้เฉพาะใน {Bllock scope} เท่านั้น
+3. const (constant variable) คือตัวแปรที่จะต้องกำหนดค่าเริ่มต้นให้ และไม่สามารถเปลี่ยนแปลงค่าได้
 
 # Data types
 
@@ -132,7 +132,7 @@ console.log(typeof val);
 ## Date to string
 
 ```js
-val = String(new Date());
+val = String(new Date()); 
 console.log(val);
 console.log(typeof val);
 ```
@@ -141,8 +141,8 @@ console.log(typeof val);
 
 ```js
 val = String([1, 2, 3, 4]);
-console.log(val);
-console.log(typeof val);
+console.log(val); // 1, 2, 3, 4 
+console.log(typeof val); // string 
 ```
 
 ## toString
@@ -922,7 +922,7 @@ console.log(ids);
 const user = {
   firstName: "John",
   lastName: "Doe",
-  age: 40,
+  age: 40, 
 };
 
 for (let x in user) {
