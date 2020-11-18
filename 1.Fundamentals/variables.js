@@ -12,6 +12,15 @@ console.log({
 console.error('this is some error');
 console.warn('This is warning');
 console.time('hello');
+console.time('Hello word');
+console.time('Hello word');
+console.time('Hello word');
+console.time('Hello word');
+console.time('Hello word');
+console.time('Hello word');
+console.time('Hello word');
+console.time('Hello word');
+console.timeEnd('Hello')
 
 // global variables
 var name = 'John doe';

@@ -1,5 +1,4 @@
 // type conversion
-// defalt variable
 let val;
 
 // number to string
@@ -28,6 +27,7 @@ val = (5).toString();
 console.log(val);
 console.log(typeof val);
 
+// Boolean toSring
 val = true.toString();
 console.log(val);
 console.log(typeof val);
@@ -39,9 +39,11 @@ val = Number(false);
 val = Number(null);
 val = Number("hello");
 
-val = parseInt("100");
+
+val = parseInt("100px");
 val = parseFloat(10.5);
 
+// เป็นการแปลงค่าให้เป็นตัวเลข
 val = Number.parseInt("12354");
 val = Number.parseFloat("12354.25");
 

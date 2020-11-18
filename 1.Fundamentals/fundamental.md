@@ -10,7 +10,7 @@ tabale of contents
   - [Boolean to string](#boolean-to-string)
   - [Date to string](#date-to-string)
   - [Array to String](#array-to-string)
-  - [toString](#tostring)
+  - [toString เราสามารถใช้ method นี้ในการแปลงค่าให้เป็น string](#tostring-เราสามารถใช้-method-นี้ในการแปลงค่าให้เป็น-string)
   - [String to number](#string-to-number)
 - [Math (Number)](#math-number)
 - [String](#string)
@@ -98,6 +98,12 @@ Data types คือ ชนิดของข้อมูลที่เรา�
 
 ## Reference types - object
 
+1. Object
+2. Array
+3. Function
+4. Date
+5. ETC
+
 ```js
 const person = {
   name: "Wissanu",
@@ -117,8 +123,8 @@ Type conversion คือการเปลี่ยนแปลงค่าเ�
 ```js
 val = String(555);
 console.log(val);
-console.log(typeof val); // '555'
-console.log(val.length); // 3
+console.log(typeof val); 
+console.log(val.length); 
 ```
 
 ## Boolean to string
@@ -141,11 +147,11 @@ console.log(typeof val);
 
 ```js
 val = String([1, 2, 3, 4]);
-console.log(val); // 1, 2, 3, 4 
-console.log(typeof val); // string 
+console.log(val); 
+console.log(typeof val); 
 ```
 
-## toString
+## toString เราสามารถใช้ method นี้ในการแปลงค่าให้เป็น string
 
 ```js
 val = (5).toString();
@@ -235,6 +241,7 @@ console.log(val);
 
 | Syntax              | Description                                                                      |
 | ------------------- | -------------------------------------------------------------------------------- |
+| :---                | :---                                                                             |
 | .length             | ใช้สำหรับเช็คว่าความยาวของตัวตัวแปรว่ามีอยู่ทังหมดกี่ตัว                                        |
 | .toUpperCase()      | เปลี่ยนตัวอักษรให้เป็นตัวใหญ่                                                            |
 | .toLowerCase()      | เปลี่ยนตัวอักษรให้เป็นตัวเล็ก                                                            |
@@ -245,6 +252,7 @@ console.log(val);
 | .slice(0, 4)        | ใช้สำหรับแยกค่าภายใน Array ออกมาทีละค่า                                                |
 | .replace('Brad')    | ใช้สำหรับวางค่าเข้าไปแทน                                                              |
 | .includes()         | ใช้สำหรับตรวจเช็คค่าว่าภายใน Array มีค่าที่เราต้องการหาหรือไม่ จะ Return ออกมาเป็น True, False |
+
 
 ```js
 let firstName = "Wissanu";
