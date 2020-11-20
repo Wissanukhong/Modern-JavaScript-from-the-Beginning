@@ -74,3 +74,4 @@ person.age = 45;
 console.log(person);
 console.log(typeof person);
 
+

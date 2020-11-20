@@ -245,7 +245,7 @@ console.log(val);
 | .length             | ใช้สำหรับเช็คว่าความยาวของตัวตัวแปรว่ามีอยู่ทังหมดกี่ตัว                                        |
 | .toUpperCase()      | เปลี่ยนตัวอักษรให้เป็นตัวใหญ่                                                            |
 | .toLowerCase()      | เปลี่ยนตัวอักษรให้เป็นตัวเล็ก                                                            |
-| .indexOf('l')       | Return Index ค่าแรกของ Array ออกมา                                                |
+| .indexOf('l')       | เป็นการตรวจเช็คค่าภายใน string หรือว่า Array อยู่ที่ตำแหน่งไหน                              |
 | .charAt('0')        | return index ค่าแรกออกมา                                                          |
 | .charAt(.length - 1 | return ค่าสุดท้ายออกมา                                                              |
 | .substring(0, 4)    | เป็นการตัดค่าออกมาแสดงเฉพาะค่าที่ต้องการ (ตัวเริ่มต้นที่ต้องการ, ตัวสุดท้ายที่ต้องการ)               |
@@ -309,6 +309,15 @@ console.log(output);
 
 ## indexOf()
 
+- ถ้าหากภายใน Array มี value ที่เราค้นหาจะ return ตำแหน่งออกมา
+- แต่ถ้าหากภายใน Array มี value ที่เราค้นหาจะ return -1 ออกมา
+
+```js
+// indexOf() เช็ค index ของ Array
+const cars = ['Toyota', 'Honda', 'Mazda'];
+console.log(cars.indexOf('Mazda')); // 2
+```
+
 ```js
 output = firstName.indexOf("W");
 console.log(output);
@@ -342,6 +351,7 @@ console.log(output);
 
 ```js
 const myAddress = "599/5 Chongonothi Yannawa Bangkok 10120";
+console.log(myAddress.split(''));
 ```
 
 ## each char

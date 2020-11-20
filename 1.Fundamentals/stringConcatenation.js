@@ -43,14 +43,14 @@ output = firstName.charAt('2')
 console.log(output);
 
 // get last char
-output = firstName.charAt(firstName.length -1);
+output = firstName.charAt(firstName.length - 1);
 console.log(output);
 
 // substring
 output = firstName.substring(0, 4);
 console.log(output);
 
-// splite
+// split
 const myAddress = '599/5 Chongonothi Yannawa Bangkok 10120';
 
 // each char
@@ -64,6 +64,10 @@ console.log(output);
 output = myAddress.split(',');
 console.log(output);
 
-// includes()
+// includes() 
 output = myAddress.includes('Chongonothi');
 console.log(output);
+
+// indexOf() เช็ค index ของ Array
+const cars = ['Toyota', 'Honda', 'Mazda'];
+console.log(cars.indexOf('Mazda')); // 2
