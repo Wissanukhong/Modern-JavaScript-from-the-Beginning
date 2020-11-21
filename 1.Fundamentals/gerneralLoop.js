@@ -61,13 +61,13 @@ cars.forEach(function (car) {
 
 // Map return deferent array
 const users = [
-  {id:1, name: 'Jouhn'},
-  {id:2, name: 'Doe'},
-  {id:3, name: 'Brown'},
-  {id:4, name: 'Smith'},
+  { id: 1, name: 'Jouhn' },
+  { id: 2, name: 'Doe' },
+  { id: 3, name: 'Brown' },
+  { id: 4, name: 'Smith' },
 ]
 
-const ids = users.map(function(user) {
+const ids = users.map(function (user) {
   return user.id;
 });
 
@@ -80,10 +80,17 @@ const user = {
   age: 40
 }
 
-for(let x in user) {
+for (let x in user) {
   console.log(`${x} : ${user[x]}`);
 }
 // Output
 // firstName : John
 // lastName : Doe
 // age : 40
+
+// days of the week
+const week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+for (let i = 0; i < week.length; i++) {
+  console.log(week[i]);
+}
