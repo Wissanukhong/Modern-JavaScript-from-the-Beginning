@@ -280,6 +280,17 @@ let scriptsArray = Array.from(allScripts);
 for (let i = 0; i < scriptsArray.length; i++) {
   console.log(scriptsArray[i].getAttribute("src"));
 }
+
+// forEach เป็นการ Loop array เพื่อนำค่าออกมาแสดง
+let cars = ['Toyota', 'Honda', 'Mazda'];
+console.log(cars); //[ 'Toyota', 'Honda', 'Mazda' ]
+
+cars.forEach(function (car) {
+    console.log(car);
+    // Toyota
+    // Honda
+    // Mazda
+});
 ```
 
 ## DOM Selector for single Elements
