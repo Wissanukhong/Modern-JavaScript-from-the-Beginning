@@ -297,6 +297,8 @@ cars.forEach(function (car) {
 
 ## Document.getElemantById('ID')
 
+`document.getElementById(``);` จะสามารถเลือกได้เฉพาะ id เท่านั้น ไม่สามารถเลือกอย่างอื่นได้ 
+
 ```js
 document.getElementById("main");
 ```
@@ -335,6 +337,15 @@ document.querySelector("h5"); // query selector by HTML Tag
 ```
 
 # DOM Selector for mutiple Elements
+
+Get Elements
+
+| No  | Syntex                 | Description                                                 |
+| --- | ---------------------- | ----------------------------------------------------------- |
+| 1   | getElementById         | เลือกเฉพาะ ID เท่านั้น                                          |
+| 2   | getElementsByClassName | เลือกเฉพาะ ClassName เท่านั้น                                   |
+| 3   | querySelector          | เลือกได้ทั้ง id, className, HTML tag แต่จะได้เฉพาะ Firstchild     |
+| 4   | querySelectorAll       | เลือกได้ทั้ง id, className, HTML tag แต่จะ Return เป็น Node Lists |
 
 ## document.getElementsByClassName
 
