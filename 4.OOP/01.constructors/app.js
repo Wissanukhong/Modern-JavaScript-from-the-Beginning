@@ -26,14 +26,14 @@ console.log(Nov.calculateAge());
 // String
 const name1 = 'Wissanu';
 const name2 = new String('Wissanu');
-console.log(typeof name2);
+console.log(`ค่าของ name2 คือ ${typeof name2}`);
 
 // Number
 const number1 = 5;
 const number2 = new Number(5);
-console.log(typeof number2);
+console.log(`ค่าของ number2 คือ ${typeof number2}`);
 
 // Boolean
 const bool1 = true;
 const bool2 = new Boolean(true);
-console.log(`ค่านี้คือ` + ' ' + typeof bool2);
+console.log(`ค่าของ bool2 คือ ${typeof bool2}`);
