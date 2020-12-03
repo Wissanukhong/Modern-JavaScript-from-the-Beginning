@@ -2,16 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Books store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <style>
+        .success,
+        .error {
+            color: white;
+            padding: 5px;
+            margin: 5px 0 15px 0;
+        }
+
+        .succes {
+            background: green;
+        }
+
+        .error {
+            background: red;
+        }
+    </style>
 </head>
 
 <body>
 
+    <div class="container">
+        <h1>Add book</h1>
+        <form id="book-form"></form>
+        <div>
+            <label for="title">Title</label>
+            <input type="text" id="title" class="u-full-width">
+        </div>
+        <div>
+            <label for="author">Author</label>
+            <input type="text" id="author" class="u-full-width">
+        </div>
+        <div>
+            <label for="isbn">ISBN</label>
+            <input type="text" id="isbn" class="u-full-width">
+        </div>
 
+        <table class="u-full-width">
+            <thead>
+                <tr>Title</tr>
+                <tr>Auther</tr>
+                <tr>ISBN</tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
 
-    <script src="app.js"></script>
+    <script src="appES5"></script>
 </body>
 
 </html>
