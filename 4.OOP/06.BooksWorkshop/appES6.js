@@ -60,6 +60,34 @@ class UI {
   }
 }
 
+// Load Storage class
+class Store {
+  static getBooks() {
+    let books;
+    if (localStorage.getItem('books') === null) {
+      books = [];
+    } else {
+      // เราต้องการ javaScript Object เพราะฉะนั้นเราจะต้องเรียกใช้งาน JSON.parse()
+      books = JSON.parse(localStorage.getItem('books'));
+    }
+
+    return books;
+  }
+
+  static displayBooks() {}
+
+  // Add book
+  static addBook(book) {
+    const books = Store.getBooks();
+
+    books.push(book);
+
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  static removeBook() {}
+}
+
 // Event listener for add book
 document.getElementById('book-form').addEventListener('submit', function (e) {
   // Get from value
@@ -79,6 +107,9 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
   } else {
     // Add book to list
     ui.addBookToList(book);
+
+    // Add to local storage
+    Store.addBook(book);
 
     // Show success
     ui.showAlert('Bokk Added!', 'success');
