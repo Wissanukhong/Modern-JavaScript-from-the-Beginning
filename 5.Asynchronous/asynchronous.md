@@ -19,3 +19,17 @@ doThenextThins();
 // ทำงานทันทีเลย โดยที่ไม่ต้องรอให้ LoadPostsSync ทำงานเสร็จก่อน
 
 ```
+
+## HTTP status
+
+- 200 : 'OK'
+- 403 : 'Forbidden'
+- 404 : 'Not Found'
+
+## ready state Values
+
+-  0 : request not initialized
+-  1 : server connection established
+-  2 : request received
+-  3 : processing request
+-  4 : request finished and reponse is ready
