@@ -1,25 +1,25 @@
 document.getElementById('click').addEventListener('click', loadData);
 
 function loadData() {
-    // Create an XHR object
+    // Create XHR object
     const xhr = new XMLHttpRequest();
 
-    // Open http
+    // XHR open
     xhr.open('GET', 'data.txt', true);
+    console.log(1);
 
-    // Onload
+    // XHR onload
     xhr.onload = function () {
         if (this.status === 200) {
             document.getElementById('output').innerHTML = `<p>${this.responseText}</p>`
-            // console.log(this.responseText);
         }
     }
 
-    // Error
+    // XHR Error
     xhr.error = function () {
         console.log('Something with wrong');
     }
 
-    // Send
+    // XHR send
     xhr.send();
 }

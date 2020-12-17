@@ -5,15 +5,18 @@
 }
 
 .container {
+  padding: 10px;
   width: 100%;
-  padding: 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .btn {
+  width: 200px;
   padding: 10px 20px;
+  background-color: #b64a4a;
   font-size: 18px;
-  font-weight: 300;
-  background-color: #cc6930;
+  border-radius: 200;
+  border: 1px solid #c57373;
 }
