@@ -33,3 +33,5 @@ doThenextThins();
 -  2 : request received
 -  3 : processing request
 -  4 : request finished and reponse is ready
+
+XMLHttpRequest (XHR) เป็นเอพีไอที่สามารถเรียกใช้ได้จาก จาวาสคริปต์ เจสคริปต์ วีบีสคริปต์ และภาษาสคริปต์อื่นๆ ในการแลกเปลี่ยน และปรับรูปแบบ XML จากเว็บเซิร์ฟเวอร์ โดยใช้ HTTP ซึ่งสร้างการเชื่อมต่อระหว่างเว็บเบราว์เซอร์ (Client-Side) กับ เว็บเซิร์ฟเวอร์ (Server-Side)
