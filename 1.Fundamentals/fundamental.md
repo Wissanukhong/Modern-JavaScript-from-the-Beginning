@@ -1,7 +1,7 @@
 tabale of contents
 
 - [การตั้งชื่อตัวแปร](#การตั้งชื่อตัวแปร)
-- [Variable](#variable)
+- [Variable ตัวแปร](#variable-ตัวแปร)
 - [Data types](#data-types)
   - [Primitive types](#primitive-types)
   - [Reference types - object](#reference-types---object)
@@ -71,13 +71,13 @@ tabale of contents
 
 # การตั้งชื่อตัวแปร
 
-- `var firstName = 'John';` // Camel case (คำแรกขึ้นต้นด้วยตัวเล็กคำต่อไปอักษรตัวแลกขึ้นต้นด้วยตัวใหญ่)
+- `var firstName = 'John';` // camelCase (คำแรกขึ้นต้นด้วยตัวเล็กคำต่อไปอักษรตัวแลกขึ้นต้นด้วยตัวใหญ่)
 
 - `var first_name = 'Sara';` // Underscore case (เชื่อมคำด้วย \_ )
 
 - `var FirstName = 'Tom';` // Pascal case (ตัวแรก เป็นตัวใหญ่)
 
-# Variable
+# Variable ตัวแปร
 
 1. var (global variable) คือสามารถเข้าถึงตัวแปรได้ทั้งโปรแกรม
 2. let (Block variable) คือตัวแปรที่เข้าถึงตัวแปรได้เฉพาะใน {Bllock scope} เท่านั้น
@@ -104,9 +104,11 @@ Data types คือ ชนิดของข้อมูลที่เรา�
 4. Date
 5. ETC
 
+The Example for reference type
+
 ```js
 const person = {
-  name: "Wissanu",
+  name: 'Wissanu',
   age: 28,
 };
 
@@ -123,8 +125,8 @@ Type conversion คือการเปลี่ยนแปลงค่าเ�
 ```js
 val = String(555);
 console.log(val);
-console.log(typeof val); 
-console.log(val.length); 
+console.log(typeof val);
+console.log(val.length);
 ```
 
 ## Boolean to string
@@ -138,7 +140,7 @@ console.log(typeof val);
 ## Date to string
 
 ```js
-val = String(new Date()); 
+val = String(new Date());
 console.log(val);
 console.log(typeof val);
 ```
@@ -147,8 +149,8 @@ console.log(typeof val);
 
 ```js
 val = String([1, 2, 3, 4]);
-console.log(val); 
-console.log(typeof val); 
+console.log(val);
+console.log(typeof val);
 ```
 
 ## toString เราสามารถใช้ method นี้ในการแปลงค่าให้เป็น string
@@ -166,7 +168,7 @@ console.log(typeof val);
 ## String to number
 
 ```js
-val = Number("5");
+val = Number('5');
 console.log(val);
 console.log(typeof val);
 
@@ -182,11 +184,11 @@ val = Number(null);
 console.log(val);
 console.log(typeof val);
 
-val = Number("hello");
+val = Number('hello');
 console.log(val);
 console.log(typeof val);
 
-val = parseInt("100");
+val = parseInt('100');
 console.log(val);
 console.log(typeof val);
 
@@ -194,11 +196,11 @@ val = parseFloat(10.5);
 console.log(val);
 console.log(typeof val);
 
-val = Number.parseInt("12354");
+val = Number.parseInt('12354');
 console.log(val);
 console.log(typeof val);
 
-val = Number.parseFloat("12354.25");
+val = Number.parseFloat('12354.25');
 console.log(val);
 console.log(typeof val);
 console.log(val.toFixed()); // Only work for number
@@ -211,15 +213,15 @@ console.log(val.toFixed()); // Only work for number
 
 # Math (Number)
 
-| Syntax   | Description                                                                         |
-| -------- | ----------------------------------------------------------------------------------- |
-| Header   | Title                                                                               |
-| random() | ใช้สำหรับ random number ระหว่าง 0.1-0.9                                                 |
+| Syntax   | Description                                                                                                |
+| -------- | ---------------------------------------------------------------------------------------------------------- |
+| Header   | Title                                                                                                      |
+| random() | ใช้สำหรับ random number ระหว่าง 0.1-0.9                                                                    |
 | round()  | ใช้สำหรับปัดเศษทศนิยมให้เป็นจำนวนเต็ม ถ้าหากค่าไม่เกิน 0.5 จะปัดเศษลง แต่ถ้าค่าเกิน 0.5 ขึ้นไปจะปัดเศษขึ้น |
-| ceil()   | ใช้สำหรับปัดเศษทศนิยมให้เป็นจำนวนเต็ม(ปัดขึ้น)                                                  |
-| floor()  | ใช้สำหรับปัดเศษทศนิยมให้เป็นจำนวนเต็ม(ปัดลง)                                                  |
-| max()    | ใช้ในการหาค่าของกลุ่มตัวเลขที่สูงที่สุด                                                        |
-| min()    | ใช้ในการหาค่าของกลุ่มตัวเลขที่ต่ำที่สุด                                                         |
+| ceil()   | ใช้สำหรับปัดเศษทศนิยมให้เป็นจำนวนเต็ม(ปัดขึ้น)                                                             |
+| floor()  | ใช้สำหรับปัดเศษทศนิยมให้เป็นจำนวนเต็ม(ปัดลง)                                                               |
+| max()    | ใช้ในการหาค่าของกลุ่มตัวเลขที่สูงที่สุด                                                                    |
+| min()    | ใช้ในการหาค่าของกลุ่มตัวเลขที่ต่ำที่สุด                                                                    |
 
 you can read this for method
 [📌 JavaScript :: Math Class](http://code.function.in.th/javascript/math)\*\*\*\*
@@ -240,24 +242,23 @@ console.log(val);
 
 # String
 
-| Syntax              | Description                                                                      |
-| ------------------- | -------------------------------------------------------------------------------- |
-| Header              | Title                                                                            |
-| .length             | ใช้สำหรับเช็คว่าความยาวของตัวตัวแปรว่ามีอยู่ทังหมดกี่ตัว                                        |
-| .toUpperCase()      | เปลี่ยนตัวอักษรให้เป็นตัวใหญ่                                                            |
-| .toLowerCase()      | เปลี่ยนตัวอักษรให้เป็นตัวเล็ก                                                            |
-| .indexOf('l')       | เป็นการตรวจเช็คค่าภายใน string หรือว่า Array อยู่ที่ตำแหน่งไหน                              |
-| .charAt('0')        | return index ค่าแรกออกมา                                                          |
-| .charAt(.length - 1 | return ค่าสุดท้ายออกมา                                                              |
-| .substring(0, 4)    | เป็นการตัดค่าออกมาแสดงเฉพาะค่าที่ต้องการ (ตัวเริ่มต้นที่ต้องการ, ตัวสุดท้ายที่ต้องการ)               |
-| .slice(0, 4)        | ใช้สำหรับแยกค่าภายใน Array ออกมาทีละค่า                                                |
-| .replace('Brad')    | ใช้สำหรับวางค่าเข้าไปแทน                                                              |
+| Syntax              | Description                                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Header              | Title                                                                                          |
+| .length             | ใช้สำหรับเช็คว่าความยาวของตัวตัวแปรว่ามีอยู่ทังหมดกี่ตัว                                       |
+| .toUpperCase()      | เปลี่ยนตัวอักษรให้เป็นตัวใหญ่                                                                  |
+| .toLowerCase()      | เปลี่ยนตัวอักษรให้เป็นตัวเล็ก                                                                  |
+| .indexOf('l')       | เป็นการตรวจเช็คค่าภายใน string หรือว่า Array อยู่ที่ตำแหน่งไหน                                 |
+| .charAt('0')        | return index ค่าแรกออกมา                                                                       |
+| .charAt(.length - 1 | return ค่าสุดท้ายออกมา                                                                         |
+| .substring(0, 4)    | เป็นการตัดค่าออกมาแสดงเฉพาะค่าที่ต้องการ (ตัวเริ่มต้นที่ต้องการ, ตัวสุดท้ายที่ต้องการ)         |
+| .slice(0, 4)        | ใช้สำหรับแยกค่าภายใน Array ออกมาทีละค่า                                                        |
+| .replace('Brad')    | ใช้สำหรับวางค่าเข้าไปแทน                                                                       |
 | .includes()         | ใช้สำหรับตรวจเช็คค่าว่าภายใน Array มีค่าที่เราต้องการหาหรือไม่ จะ Return ออกมาเป็น True, False |
 
-
 ```js
-let firstName = "Wissanu";
-let lastname = "Khongjandee";
+let firstName = 'Wissanu';
+let lastname = 'Khongjandee';
 
 let output;
 ```
@@ -272,15 +273,15 @@ console.log(output);
 ## concantination
 
 ```js
-output = firstName + " " + lastname;
+output = firstName + ' ' + lastname;
 console.log(output);
 ```
 
 ## Append (เพิ่มค่าเข้าไป)
 
 ```js
-output = "John ";
-output += "Due";
+output = 'John ';
+output += 'Due';
 console.log(output);
 ```
 
@@ -294,7 +295,7 @@ console.log(output);
 ## function concat
 
 ```js
-output = firstName.concat(" ", lastname);
+output = firstName.concat(' ', lastname);
 console.log(output);
 ```
 
@@ -320,17 +321,17 @@ console.log(cars.indexOf('Mazda')); // 2
 ```
 
 ```js
-output = firstName.indexOf("W");
+output = firstName.indexOf('W');
 console.log(output);
 
-output = firstName.lastIndexOf("s");
+output = firstName.lastIndexOf('s');
 console.log(output);
 ```
 
 ## charArt()
 
 ```js
-output = firstName.charAt("2");
+output = firstName.charAt('2');
 console.log(output);
 ```
 
@@ -351,59 +352,59 @@ console.log(output);
 ## splite
 
 ```js
-const myAddress = "599/5 Chongonothi Yannawa Bangkok 10120";
+const myAddress = '599/5 Chongonothi Yannawa Bangkok 10120';
 console.log(myAddress.split(''));
 ```
 
 ## each char
 
 ```js
-output = myAddress.split("");
+output = myAddress.split('');
 console.log(output);
 ```
 
 ## each comma
 
 ```js
-output = myAddress.split(" ");
+output = myAddress.split(' ');
 console.log(output);
 
-output = myAddress.split(",");
+output = myAddress.split(',');
 console.log(output);
 ```
 
 ## includes()
 
 ```js
-output = myAddress.includes("Chongonothi");
+output = myAddress.includes('Chongonothi');
 console.log(output);
 ```
 
 # Template literals
 
 ```js
-const name = "John";
+const name = 'John';
 const age = 30;
-const job = "Web developer";
-const city = "Bangkok";
+const job = 'Web developer';
+const city = 'Bangkok';
 
 // with es5
 let es5 =
-  "<h1>ES5</h1>" +
-  "<ul>" +
-  "<li>Name: " +
+  '<h1>ES5</h1>' +
+  '<ul>' +
+  '<li>Name: ' +
   name +
-  "</li>" +
-  "<li>age: " +
+  '</li>' +
+  '<li>age: ' +
   age +
-  "</li>" +
-  "<li>job: " +
+  '</li>' +
+  '<li>job: ' +
   job +
-  "</li>" +
-  "<li>city: " +
+  '</li>' +
+  '<li>city: ' +
   city +
-  "</li>" +
-  "</ul>";
+  '</li>' +
+  '</ul>';
 
 document.body.innerHTML = es5;
 
@@ -430,11 +431,11 @@ const number = [43, 56, 33, 23, 44, 36];
 console.log(number);
 
 // way 2
-const person = new Array("John due", "Brown smith");
+const person = new Array('John due', 'Brown smith');
 console.log(person);
 
 // way 3
-const fruit = ["Banana", "Orange", "Pear", "apple"];
+const fruit = ['Banana', 'Orange', 'Pear', 'apple'];
 console.log(fruit);
 
 // Output
@@ -444,7 +445,7 @@ let output;
 ## Change case with loop array
 
 ```js
-const fruits = ["Banana", "Orange", "Pear", "apple"];
+const fruits = ['Banana', 'Orange', 'Pear', 'apple'];
 
 for (i = 0; i < fruit.length; i++) {
   const changeCase = fruit[i].toUpperCase();
@@ -455,30 +456,30 @@ for (i = 0; i < fruit.length; i++) {
 ## Array length
 
 ```js
-const allFruit = ["Banana", "Orange", "Pear", "apple"];
+const allFruit = ['Banana', 'Orange', 'Pear', 'apple'];
 console.log(allFruit.length);
 ```
 
 ## check something in Array it will return 'ture' and 'False'
 
 ```js
-const allFruit1 = ["Banana", "Orange", "Pear", "apple"];
-const checkArray = Array.isArray("Banana");
+const allFruit1 = ['Banana', 'Orange', 'Pear', 'apple'];
+const checkArray = Array.isArray('Banana');
 console.log(checkArray);
 ```
 
 ## Get single value
 
 ```js
-const allFruit2 = ["Banana", "Orange", "Pear", "apple"];
+const allFruit2 = ['Banana', 'Orange', 'Pear', 'apple'];
 console.log(allFruit2[2]);
 ```
 
 ## Insert value into array (It is replace on the old value)
 
 ```js
-const allFruit3 = ["Banana", "Orange", "Pear", "apple"];
-allFruit3[2] = "Cake";
+const allFruit3 = ['Banana', 'Orange', 'Pear', 'apple'];
+allFruit3[2] = 'Cake';
 console.log(allFruit3);
 ```
 
@@ -521,7 +522,7 @@ console.log(number2);
 ## Splice การเลือกค่าจาก array มาแสดง
 
 ```js
-let myAddress = ["599/5", "Chongonothi", "Yannawa", "Bangkok", "10120"];
+let myAddress = ['599/5', 'Chongonothi', 'Yannawa', 'Bangkok', '10120'];
 let output = myAddress.splice(1, 2);
 console.log(output); // 'Chongonothi', 'Yannawa'
 ```
@@ -536,8 +537,8 @@ console.log(number2);
 ## Revers workshop
 
 ```js
-let myName = "Wissanu Khongjandee";
-let sliceMyName = myName.split("");
+let myName = 'Wissanu Khongjandee';
+let sliceMyName = myName.split('');
 console.log(sliceMyName);
 let reversMyName = sliceMyName.reverse();
 console.log(reversMyName);
@@ -546,7 +547,7 @@ console.log(reversMyName);
 ## sorting string
 
 ```js
-const allFruit4 = ["Banana", "Orange", "Pear", "Apple"];
+const allFruit4 = ['Banana', 'Orange', 'Pear', 'Apple'];
 output = allFruit4.sort();
 console.log(output);
 ```
@@ -577,14 +578,14 @@ console.log(output);
 
 ```js
 const person = {
-  firstName: "Steve",
-  lastName: "Smith",
+  firstName: 'Steve',
+  lastName: 'Smith',
   age: 30,
-  email: "wissanu.kong@SpeechGrammarList.com",
-  hobbies: ["music", "sports"],
+  email: 'wissanu.kong@SpeechGrammarList.com',
+  hobbies: ['music', 'sports'],
   address: {
-    city: "Chongnonthi",
-    state: "Yannawa",
+    city: 'Chongnonthi',
+    state: 'Yannawa',
   },
   getBirthYear: function () {
     return 2020 - this.age;
@@ -602,7 +603,7 @@ val = person;
 val = person.firstName;
 console.log(val);
 
-val = person["lastName"];
+val = person['lastName'];
 console.log(val);
 
 val = person.age;
@@ -611,7 +612,7 @@ console.log(val);
 val = person.hobbies[1];
 console.log(val);
 
-val = person.address["city"];
+val = person.address['city'];
 console.log(val);
 
 val = person.getBirthYear();
@@ -622,14 +623,14 @@ console.log(val);
 
 ```js
 const people = [
-  { name: "John", age: 30 },
-  { name: "Smith", age: 25 },
-  { name: "Bob", age: 32 },
-  { name: "Brown", age: 39 },
+  { name: 'John', age: 30 },
+  { name: 'Smith', age: 25 },
+  { name: 'Bob', age: 32 },
+  { name: 'Brown', age: 39 },
 ];
 
 for (let i = 0; i < people.length; i++) {
-  console.log(people[i].name + " " + people[i].age);
+  console.log(people[i].name + ' ' + people[i].age);
 }
 ```
 
@@ -639,9 +640,9 @@ for (let i = 0; i < people.length; i++) {
 let val;
 
 const today = new Date();
-let birthday = new Date("9-10-1981 11:25:00");
-birthday = new Date("September 10 1981");
-birthday = new Date("9/10/1981");
+let birthday = new Date('9-10-1981 11:25:00');
+birthday = new Date('September 10 1981');
+birthday = new Date('9/10/1981');
 
 val = today.getMonth();
 val = today.getDate();
@@ -673,9 +674,9 @@ console.log(birthday);
 
 ```js
 if (id == 101) {
-  console.log("CORRECT");
+  console.log('CORRECT');
 } else {
-  console.log("INCORRECT");
+  console.log('INCORRECT');
 }
 ```
 
@@ -683,9 +684,9 @@ if (id == 101) {
 
 ```js
 if (id != 101) {
-  console.log("CORRECT");
+  console.log('CORRECT');
 } else {
-  console.log("INCORRECT");
+  console.log('INCORRECT');
 }
 ```
 
@@ -693,9 +694,9 @@ if (id != 101) {
 
 ```js
 if (id === 100) {
-  console.log("CORRECT");
+  console.log('CORRECT');
 } else {
-  console.log("INCORRECT");
+  console.log('INCORRECT');
 }
 ```
 
@@ -703,16 +704,16 @@ if (id === 100) {
 
 ```js
 if (id !== 100) {
-  console.log("CORRECT");
+  console.log('CORRECT');
 } else {
-  console.log("INCORRECT");
+  console.log('INCORRECT');
 }
 ```
 
 ## Test if undefined
 
 ```js
-if (typeof id !== "undefined") {
+if (typeof id !== 'undefined') {
   console.log(`The ID is ${id}`);
 } else {
   console.log(`NO ID`);
@@ -723,29 +724,29 @@ if (typeof id !== "undefined") {
 
 ```js
 if (id > 200) {
-  console.log("CORRECT");
+  console.log('CORRECT');
 } else {
-  console.log("INCORRECT");
+  console.log('INCORRECT');
 }
 ```
 
 ## if else workshop
 
 ```js
-const color = "red";
-if (color === "red") {
-  console.log("color is red");
-} else if (color === "blue") {
-  console.log("Color is blue");
+const color = 'red';
+if (color === 'red') {
+  console.log('color is red');
+} else if (color === 'blue') {
+  console.log('Color is blue');
 } else {
-  console.log("Color is not red or blue");
+  console.log('Color is not red or blue');
 }
 ```
 
 ## Logical operator
 
 ```js
-const name = "Steve";
+const name = 'Steve';
 const age = 20;
 
 if (age > 0 && age < 12) {
@@ -760,24 +761,24 @@ if (age > 0 && age < 12) {
 ## Ternary Operator
 
 ```js
-console.log(id === 100 ? "CORRECT" : "INCORRECT");
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
 ```
 
 ## Switches case
 
 ```js
 // switch case
-const color = "green";
+const color = 'green';
 
 switch (color) {
-  case "red":
-    console.log("Color is red");
+  case 'red':
+    console.log('Color is red');
     break;
-  case "blue":
-    console.log("Color is blue");
+  case 'blue':
+    console.log('Color is blue');
     break;
   default:
-    console.log("color is not red or blue");
+    console.log('color is not red or blue');
     break;
 }
 
@@ -785,25 +786,25 @@ let day;
 
 switch (new Date().getDay()) {
   case 0:
-    day = "Sunday";
+    day = 'Sunday';
     break;
   case 1:
-    day = "Monday";
+    day = 'Monday';
     break;
   case 2:
-    day = "Tueday";
+    day = 'Tueday';
     break;
   case 3:
-    day = "Wednesday";
+    day = 'Wednesday';
     break;
   case 4:
-    day = "Thursday";
+    day = 'Thursday';
     break;
   case 5:
-    day = "Friday";
+    day = 'Friday';
     break;
   case 6:
-    day = "Saturday";
+    day = 'Saturday';
     break;
 }
 
@@ -820,7 +821,7 @@ Function is the block of code
 ```js
 // Function declarations
 function greet() {
-  console.log("Hello");
+  console.log('Hello');
 }
 
 greeting();
@@ -834,18 +835,18 @@ console.log(square());
 
 // Immidiatley Invokable Function Expression - IIFEs
 (function () {
-  console.log("Start here...");
+  console.log('Start here...');
 })();
 
 // Invokable Function Expression = arrow function
 (() => {
-  console.log("hello");
+  console.log('hello');
 })();
 
 // Property Method
 const todo = {
   add: function () {
-    console.log("Add todo....");
+    console.log('Add todo....');
   },
   edit: function (id) {
     console.log(`Edit todo ${id}`);
@@ -853,7 +854,7 @@ const todo = {
 };
 
 todo.delete = function () {
-  console.log("Delete todo");
+  console.log('Delete todo');
 };
 
 todo.add();
@@ -873,30 +874,30 @@ for (let i = 0; i < 10; i++) {
 for (let i = 0; i < 10; i++) {
   // continue
   if (i === 2) {
-    console.log("2 is my favorite number");
+    console.log('2 is my favorite number');
     continue;
   }
-  console.log("Number " + i);
+  console.log('Number ' + i);
 }
 
 // For loop break
 for (let i = 0; i < 10; i++) {
   // continue
   if (i === 2) {
-    console.log("2 is my favorite number");
+    console.log('2 is my favorite number');
     continue;
   }
   if (i === 5) {
-    console.log("5 is my favorite number");
+    console.log('5 is my favorite number');
     break;
   }
-  console.log("Number " + i);
+  console.log('Number ' + i);
 }
 
 // While loop
 let i = 0;
 while (i < 10) {
-  console.log("Number " + i);
+  console.log('Number ' + i);
   i++;
 }
 
@@ -904,20 +905,20 @@ while (i < 10) {
 let j = 0;
 
 do {
-  console.log("This is from do while loop " + i);
+  console.log('This is from do while loop ' + i);
   j++;
   break;
 } while (j < 10);
 
 // Loop in array
-const cars = ["Ford", "Checy", "Honda", "Toyota"];
+const cars = ['Ford', 'Checy', 'Honda', 'Toyota'];
 
 for (i = 0; i < cars.length; i++) {
   console.log(cars[i]);
 }
 
 //forEacch (use callBack function)
-const cars = ["Ford", "Checy", "Honda", "Toyota"];
+const cars = ['Ford', 'Checy', 'Honda', 'Toyota'];
 
 cars.forEach(function (car) {
   console.log(car);
@@ -925,10 +926,10 @@ cars.forEach(function (car) {
 
 // Map return deferent array
 const users = [
-  { id: 1, name: "Jouhn" },
-  { id: 2, name: "Doe" },
-  { id: 3, name: "Brown" },
-  { id: 4, name: "Smith" },
+  { id: 1, name: 'Jouhn' },
+  { id: 2, name: 'Doe' },
+  { id: 3, name: 'Brown' },
+  { id: 4, name: 'Smith' },
 ];
 
 const ids = users.map(function (user) {
@@ -939,9 +940,9 @@ console.log(ids);
 
 // for in loop
 const user = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 40, 
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 40,
 };
 
 for (let x in user) {
@@ -959,17 +960,17 @@ for (let x in user) {
 // WINDOW METHODS / OBJECTS / PROPERTIES
 
 // Alert
-alert("Hello World");
+alert('Hello World');
 
 // Prompt
 const input = prompt();
 alert(input);
 
 // Confirm
-if (confirm("Are you sure")) {
-  console.log("YES");
+if (confirm('Are you sure')) {
+  console.log('YES');
 } else {
-  console.log("NO");
+  console.log('NO');
 }
 
 let val;
@@ -994,7 +995,7 @@ val = window.location.href;
 val = window.location.search;
 
 // Redirect
-window.location.href = "http://google.com";
+window.location.href = 'http://google.com';
 Reload;
 window.location.reload();
 
@@ -1033,9 +1034,9 @@ function test() {
   var a = 4;
   let b = 5;
   const c = 6;
-  console.log("Function scope: ", a, b, c);
+  console.log('Function scope: ', a, b, c);
 }
 test();
 
-console.log("Global Scope: ", a, b, c);
+console.log('Global Scope: ', a, b, c);
 ```
