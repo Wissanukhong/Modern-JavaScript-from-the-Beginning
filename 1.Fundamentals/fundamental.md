@@ -77,6 +77,8 @@ tabale of contents
 
 - `var FirstName = 'Tom';` // Pascal case (ตัวแรก เป็นตัวใหญ่)
 
+> เราจะใช้ Pascal case ที่เป็นการขึ้นต้นด้วยตัวใหญ่เมื่อเราเขียน Object Oriented Programming หรือว่าการสร้าง Class
+
 # Variable ตัวแปร
 
 1. var (global variable) คือสามารถเข้าถึงตัวแปรได้ทั้งโปรแกรม
@@ -130,6 +132,10 @@ console.log(val.length);
 ```
 
 ## Boolean to string
+
+_Boolean number_  
+True = 1  
+False = 0
 
 ```js
 val = String(true);
@@ -188,6 +194,7 @@ val = Number('hello');
 console.log(val);
 console.log(typeof val);
 
+// เป็นการส่งค่าตัวเลขเข้าไป โดยจะตัดจุดทศนิยมออกไป
 val = parseInt('100');
 console.log(val);
 console.log(typeof val);
