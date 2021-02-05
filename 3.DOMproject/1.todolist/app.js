@@ -1,20 +1,20 @@
-// Define UI Varibals
+// defint UI vars
 const form = document.querySelector('#task-form');
 const tasklist = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 
-// LoadEventLisener
-loadEventListener();
+// Load all event listener
+loadEventListeners();
 
-// Function loadEventListener
-function loadEventListener() {
+// function loadEventListener
+function loadEventListeners() {
   // Add task event
   form.addEventListener('submit', addTask);
 }
 
-// Add task
+// Function addTask
 function addTask(e) {
   if (taskInput.value === '') {
     alert('Please add a task');
@@ -22,31 +22,26 @@ function addTask(e) {
 
   // Create li element
   const li = document.createElement('li');
-
   // Add className
   li.className = 'collection-item';
-
   // Create text node and append to li
   li.appendChild(document.createTextNode(taskInput.value));
 
-  // Create new link Element
+  // Create new link element
   const link = document.createElement('a');
-
   // Add className
   link.className = 'delete-item secondary-content';
-
   // Add icon html
   link.innerHTML = '<i class="fa fa-remove"></i>';
-
-  // Append the link to li
+  // Apeend the link to li
   li.appendChild(link);
 
   // Append li to ul
   tasklist.appendChild(li);
 
-  // Clear input
+  // Clear taskInput value
   taskInput.value = '';
 
-  //เพื่อไม่ให้โปรแกรมทำการ Load ใหม่ทุกครั้งเวลาที่กด submit
-  e.preventDefault;
+  // e.preventDefault จะเป็นการป้องกันการ Reflesh หน้าจอตอนที่เรากด submit
+  e.preventDefault();
 }
