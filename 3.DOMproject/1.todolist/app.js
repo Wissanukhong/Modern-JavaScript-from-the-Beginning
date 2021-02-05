@@ -12,6 +12,15 @@ loadEventListeners();
 function loadEventListeners() {
   // Add task event
   form.addEventListener('submit', addTask);
+
+  // Function remove task list
+  tasklist.addEventListener('click', removeTask);
+
+  // Function clear task event
+  clearBtn.addEventListener('click', clearTasks);
+
+  // Function filter tasks event
+  filter.addEventListener('keyup', filterTasks);
 }
 
 // Function addTask
@@ -44,4 +53,36 @@ function addTask(e) {
 
   // e.preventDefault จะเป็นการป้องกันการ Reflesh หน้าจอตอนที่เรากด submit
   e.preventDefault();
+}
+
+// Function Remove task
+function removeTask(e) {
+  if (e.target.parentElement.classList.contains('delete-item')) {
+    if (confirm('Are you Sure?')) {
+      e.target.parentElement.parentElement.remove();
+    }
+  }
+}
+
+// Function clear Tasks
+function clearTasks() {
+  while (tasklist.firstChild) {
+    tasklist.removeChild(tasklist.firstChild);
+  }
+
+  filter.value = '';
+}
+
+// Function filter
+function filterTasks(e) {
+  const text = e.target.value.toLowerCase();
+
+  document.querySelectorAll('.collection-item').forEach(function (task) {
+    const item = task.firstChild.textContent;
+    if (item.toLowerCase().indexOf(text) != -1) {
+      task.style.display = 'block';
+    } else {
+      task.style.display = 'none';
+    }
+  });
 }
